@@ -2,7 +2,7 @@
 layout: page
 title: Is the Youtube algorithm apolitical?
 description:
-img: assets/img/12.jpg
+img: assets/img/11.jpg
 importance: 1
 category: work
 related_publications: ibrahim2023youtube
