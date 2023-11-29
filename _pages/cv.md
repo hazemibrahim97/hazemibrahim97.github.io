@@ -1,11 +1,9 @@
 ---
-layout: cv
+layout: page
 permalink: /cv/
 title: CV
 nav: true
-nav_order: 4
-cv_pdf: cv.pdf
-description: Please click the pdf button to download my CV!
-toc:
-  sidebar: left
 ---
+
+Last Updated: Nov 2023
+<iframe src="/assets/pdf/cv.pdf#toolbar=0" width="100%" height="1000px"> </iframe>
