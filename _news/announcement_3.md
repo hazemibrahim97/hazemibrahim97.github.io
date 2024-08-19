@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our work "Big Tech dominance despite global mistrust" was accepted in IEEE Transactions on Computational Social Systems.
+Published our work titled ["Google Scholar is manipulatable"](https://arxiv.org/pdf/2402.04607.pdf) on arXiv. This work was covered by the news teams at [Science](https://www.science.org/content/article/vendor-offering-citations-purchase-latest-bad-actor-scholarly-publishing).
