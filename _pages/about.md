@@ -21,3 +21,6 @@ Hi! I'm Hazem, a second year Ph.D student at NYU studying Computer Science, with
 My research interests lie in understanding the societal impact of technology, from discerning the existence of algorithmic bias in recommendation systems, to the misuse of technology in academic/pedagogical contexts. Currently, my work is focused on understanding how ethnic and gender representations have changed in popular forms of media, such as in movies or fashion magazines, and how these different groups are presented contextually. 
 
 Outside of academia, I've also coached the three New York University Abu Dhabi varsity basketball teams, winning the Abu Dhabi Intercollegiate Sports League title in 2022-2023.
+
+
+Email: hazem.ibrahim [at] nyu.edu
