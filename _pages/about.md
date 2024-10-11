@@ -16,7 +16,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Hi! I'm Hazem, a second year Ph.D student at NYU studying Computer Science, with a specific focus on Computational Social Science.
+Hi! I'm Hazem, a second year Ph.D candidate at NYU studying Computer Science, with a specific focus on Computational Social Science.
 
 My research interests lie in understanding the societal impact of technology, from discerning the existence of algorithmic bias in recommendation systems, to the misuse of technology in academic/pedagogical contexts. Currently, my work is focused on understanding how ethnic and gender representations have changed in popular forms of media, such as in movies or fashion magazines, and how these different groups are presented contextually. 
 
