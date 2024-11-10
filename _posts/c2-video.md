@@ -3,7 +3,7 @@ layout: post
 title:  a post with videos
 date: 2024-10-21 21:01:00
 description: c2-index
-tags: formatting videos
+tags: featured
 categories: videos
 ---
 
