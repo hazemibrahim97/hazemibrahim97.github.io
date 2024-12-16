@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazem's Personal Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <script src="js/main.js" type="module" defer></script>
+    <script src="js/pages/home-page.js" type="module" defer></script>
+    <script src="js/theme.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="news.html">News</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="cv.html">CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="bio" class="section">
+            <div class="container">
+                <div class="bio-content">
+                    <div class="bio-image">
+                        <img src="./assets/hazem.jpg" alt="Hazem Ibrahim">
+                    </div>
+                    <div class="bio-text">
+                        <h1>Hazem Ibrahim</h1>
+                        <div class="social-icons">
+                            <a href="https://twitter.com/hazemibr_" target="_blank" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://scholar.google.com/citations?user=gB_u0lcAAAAJ&hl=en" target="_blank" aria-label="Google Scholar">
+                                <i class="ai ai-google-scholar"></i>
+                            </a>
+                        </div>
+                        <p class="description">
+                            Hi! I'm Hazem, a second year Ph.D candidate at NYU studying Computer Science, with a specific focus on Computational Social Science. <br><br>
+                            My research interests lie in understanding the societal impact of technology, from discerning the existence of algorithmic bias in recommendation systems, to the misuse of technology in academic/pedagogical contexts. Currently, my work is focused on understanding how ethnic and gender representations have changed in popular forms of media, such as in movies or fashion magazines, and how these different groups are presented contextually. <br><br>
+                            Outside of academia, I've also coached the three New York University Abu Dhabi varsity basketball teams, winning the Abu Dhabi Intercollegiate Sports League title in 2022-2023. <br><br>
+                            Email: hazem.ibrahim [at] nyu.edu
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="recent-news" class="section">
+            <div class="container">
+                <h2>Recent News</h2>
+                <div class="news-grid">
+                    <!-- News items will be loaded from news.js -->
+                </div>
+                <a href="news.html" class="view-all">View All News →</a>
+            </div>
+        </section>
+
+        <section id="selected-publications" class="section">
+            <div class="container">
+                <h2>Selected Publications</h2>
+                <div class="publications-grid">
+                    <!-- Publications will be loaded from publications.js -->
+                </div>
+                <a href="publications.html" class="view-all">View All Publications →</a>
+            </div>
+        </section>
+
+        <section id="featured-projects" class="section">
+            <div class="container">
+                <h2>Personal Projects</h2>
+                <div class="projects-grid">
+                    <!-- Projects will be loaded from projects.js -->
+                </div>
+                <a href="projects.html" class="view-all">View All Projects →</a>
+            </div>
+        </section>
+
+        <section id="featured-videos" class="section">
+            <div class="container">
+                <h2>Videos</h2>
+                <div class="videos-grid">
+                    <!-- Videos will be loaded from videos.js -->
+                </div>
+                <!-- <a href="videos.html" class="view-all">View All Videos →</a> -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            
+        </div>
+    </footer>
+</body>
+</html> 

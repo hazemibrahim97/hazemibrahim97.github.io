@@ -1,0 +1,259 @@
+/* Page Header Styles */
+.page-header {
+    background-color: var(--bg-secondary);
+    padding: 6rem 2rem 3rem;
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    color: var(--text-primary);
+}
+
+/* Content Section Styles */
+.content-section {
+    padding: 2rem 0;
+}
+
+/* News Page Styles */
+.news-grid.full {
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.news-item {
+    background-color: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.news-date {
+    color: var(--accent);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Publications Page Styles */
+.publications-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.publication-item {
+    background-color: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+}
+
+.publication-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.publication-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    line-height: 1.3;
+}
+
+.publication-authors {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.publication-meta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.publication-link {
+    color: var(--accent);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(74, 158, 255, 0.1);
+    border-radius: 20px;
+    transition: var(--transition);
+}
+
+.publication-link:hover {
+    background-color: rgba(74, 158, 255, 0.2);
+}
+
+/* Project Styles */
+.project-item {
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.tech-tag {
+    background-color: rgba(74, 158, 255, 0.2);
+    color: var(--accent);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Video Styles */
+.video-item {
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.video-thumbnail {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--accent);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.play-button:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+.video-content {
+    padding: 1.5rem;
+}
+
+.video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.close-modal {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* CV Page Styles */
+.cv-container {
+    width: 100%;
+    height: 90vh;
+    margin: 0 auto;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cv-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Add media query for better mobile experience */
+@media (max-width: 768px) {
+    .cv-container {
+        height: 80vh;
+    }
+} 
