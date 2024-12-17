@@ -5,18 +5,15 @@ function createPublicationItem(pub) {
     article.className = 'publication-item';
     
     article.innerHTML = `
-        <h2 class="publication-title">${pub.title}</h2>
-        <p class="publication-authors">${pub.authors.join(', ')}</p>
-        <p>${pub.journal} (${pub.year})</p>
-        <div class="publication-meta">
-            ${pub.doi ? `
-                <a href="${pub.doi}" class="publication-link" target="_blank">
-                    <i class="fas fa-external-link-alt"></i> DOI
-                </a>
-            ` : ''}
+        <div class="publication-item-header">
+            <div class="publication-item-content">
+                <h2 class="publication-title">${pub.title}</h2>
+                <p class="publication-authors">${pub.authors.join(', ')}</p>
+                <p>${pub.journal} (${pub.year})</p>
+            </div>
             ${pub.pdf ? `
                 <a href="${pub.pdf}" class="publication-link" target="_blank">
-                    <i class="fas fa-file-pdf"></i> PDF
+                    <i class="fas fa-file-pdf"></i>
                 </a>
             ` : ''}
         </div>

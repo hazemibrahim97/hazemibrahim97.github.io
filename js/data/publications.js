@@ -38,6 +38,7 @@ const publications = [
         authors: ['Hazem Ibrahim', 'Mikołaj Dębicki', 'Talal Rahwan', 'Yasir Zaki'],
         journal: 'IEEE Transactions on Computational Social Systems',
         year: 2024,
+        pdf: 'https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10379489',
         featured: true
     },
     {

@@ -206,20 +206,22 @@ body {
 
 .news-item,
 .publication-item,
-.project-item {
+.project-item,
+.video-item {
     background-color: var(--bg-secondary);
     padding: 1.5rem;
     border-radius: 12px;
     transition: var(--transition);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .news-item:hover,
 .publication-item:hover,
-.project-item:hover {
+.project-item:hover,
+.video-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     background-color: #e0e0e0;
     border-color: #e0e0e0;
 }
@@ -276,6 +278,11 @@ section.section:last-of-type {
     .bio-image img {
         width: 150px;
         height: 150px;
+    }
+
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .nav-links {
@@ -384,6 +391,24 @@ section.section:last-of-type {
     gap: 0.25rem;
 }
 
+.publication-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.publication-item-content {
+    flex: 1;
+}
+
+.publication-link {
+    flex-shrink: 0;
+    color: var(--accent);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
 .publications-grid .publication-title {
     font-size: 1.1rem;
     line-height: 1.4;
@@ -405,6 +430,8 @@ section.section:last-of-type {
     font-size: 0.9rem;
     color: var(--text-secondary);
     margin-bottom: 0.15rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
 }
 
 .publications-grid .publication-meta {
@@ -696,4 +723,11 @@ a:hover {
 /* Add spacing between sections */
 .section + .section {
     margin-top: 1rem;
+}
+
+/* Also update the journal/year text */
+.publications-grid .publication-item p {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    color: var(--text-secondary);
 }
