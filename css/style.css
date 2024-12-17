@@ -551,6 +551,8 @@ section.section:last-of-type {
 .news-item:hover p,
 .publication-item:hover .publication-title,
 .publication-item:hover .publication-title a,
+.publication-item:hover .publication-authors,
+.publication-item:hover .publication-meta,
 .publication-item:hover p,
 .project-item:hover .project-title,
 .project-item:hover .project-description,

@@ -39,7 +39,7 @@ function loadSelectedPublications() {
                 <a href="${pub.doi || pub.pdf}" target="_blank">${pub.title}</a>
             </h2>
             <p class="publication-authors">${pub.authors.join(', ')}</p>
-            <p>${pub.journal} (${pub.year})</p>
+            <p class="publication-meta">${pub.journal} (${pub.year})</p>
         `;
         pubGrid.appendChild(article);
     });

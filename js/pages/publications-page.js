@@ -9,7 +9,7 @@ function createPublicationItem(pub) {
             <div class="publication-item-content">
                 <h2 class="publication-title">${pub.title}</h2>
                 <p class="publication-authors">${pub.authors.join(', ')}</p>
-                <p>${pub.journal} (${pub.year})</p>
+                <p class="publication-meta">${pub.journal} (${pub.year})</p>
             </div>
             ${pub.pdf ? `
                 <a href="${pub.pdf}" class="publication-link" target="_blank">
