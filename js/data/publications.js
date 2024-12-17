@@ -1,5 +1,21 @@
 const publications = [
     {
+        title: 'Analyzing political stances on Twitter in the lead-up to the 2024 US election',
+        authors: ['Hazem Ibrahim', 'Farhan Khan', 'Hend Alabdouli', 'Maryam Almatrooshi', 'Tran Nguyen', 'Talal Rahwan', 'Yasir Zaki'],
+        journal: 'arXiv preprint arXiv:2412.02712',
+        year: 2024,
+        pdf: 'https://arxiv.org/pdf/2412.02712.pdf',
+        featured: false
+    },
+    {
+        title: 'A Longitudinal Analysis of Racial and Gender Bias in New York Times and Fox News Images and Articles',
+        authors: ['Hazem Ibrahim', 'Nouar AlDahoul', 'Syed Mustafa Ali Abbasi', 'Fareed Zaffar', 'Talal Rahwan', 'Yasir Zaki'],
+        journal: 'arXiv preprint arXiv:2410.21898',
+        year: 2024,
+        pdf: 'https://arxiv.org/pdf/2410.21898.pdf',
+        featured: false
+    },
+    {
         title: 'Inclusive content reduces racial and gender biases, yet non-inclusive content dominates popular media outlets',
         authors: ['Nouar AlDahoul', 'Hazem Ibrahim', 'Minsu Park', 'Talal Rahwan', 'Yasir Zaki'],
         journal: 'arXiv preprint arXiv:2405.06404',
