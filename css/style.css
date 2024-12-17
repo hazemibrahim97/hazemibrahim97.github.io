@@ -48,9 +48,15 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: var(--bg-secondary);
+    background-color: rgba(22, 27, 34, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+:root[data-theme="light"] .navbar {
+    background-color: rgba(245, 245, 245, 0.8);
 }
 
 .nav-content {
