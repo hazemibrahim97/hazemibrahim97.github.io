@@ -17,6 +17,14 @@ const projects = [
         demo: 'https://citationdashboard.streamlit.app/',
         featured: true
     },
+    {
+        title: 'Finding High Degree Nodes through Random Walks',
+        description: 'A tool to visualize random walks on a graph in their pursuit of finding the highest degree nodes in the graph.',
+        technologies: ['Javascript'],
+        demo: 'https://observablehq.com/d/790d9385fe47817d',
+        featured: true
+    },
+
 ];
 
 console.log('Projects module loaded:', projects);
