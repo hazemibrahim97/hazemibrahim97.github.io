@@ -1,5 +1,17 @@
 const news = [
     {
+        date: '2024-05-08',
+        title: 'New paper on arXiv',
+        description: "Published our work titled <a href='https://arxiv.org/abs/2505.04171'>Large Language Models are often politically extreme, usually ideologically inconsistent, and persuasive even in informational contexts </a> on arXiv. The paper is currently under review at Science.",
+        link: 'https://arxiv.org/abs/2505.04171'
+    },
+    {
+        date: '2024-05-07',
+        title: 'New paper on arXiv',
+        description: "Published our work titled <a href='https://arxiv.org/abs/2501.17831'> TikTok's recommendations skewed towards Republican content during the 2024 U.S. presidential race </a> on arXiv. The paper is currently under review at Nature.",
+        link: 'https://arxiv.org/abs/2501.17831'
+    },
+    {
         date: '2024-10-10',
         title: 'Successfully passed my PhD qualifying exam',
         description: 'I passed my PhD qualifying exam, which is a required step for PhD students in the Computer Science department at NYU. Finally a PhD candidate!',
@@ -15,7 +27,7 @@ const news = [
         date: '2024-06-01',
         title: 'New paper on arXiv',
         description: 'Published our work titled <a href="https://arxiv.org/abs/2405.06404">Inclusive content reduces racial and gender biases, yet non-inclusive content dominates popular media outlets</a> on arXiv.',
-        link: '#'
+        link: 'https://arxiv.org/abs/2405.06404'
     },
     {
         date: '2023-11-24',
@@ -26,4 +38,4 @@ const news = [
 ];
 
 console.log('News module loaded:', news);
-export default news; 
+export default news;

@@ -1,5 +1,30 @@
 const publications = [
     {
+        title: 'Large Language Models are often politically extreme, usually ideologically inconsistent, and persuasive even in informational contexts',
+        authors: ['Nouar AlDahoul', 'Hazem Ibrahim', 'Matteo Varvello', 'Aaron Kaufman', 'Talal Rahwan', 'Yasir Zaki'],
+        journal: 'arXiv preprint arXiv:2505.04171',
+        year: 2025,
+        pdf: 'https://arxiv.org/pdf/2505.04171.pdf',
+        featured: true
+    },
+    {
+        title: 'TikTok\'s recommendations skewed towards Republican content during the 2024 U.S. presidential race',
+        authors: ['Hazem Ibrahim', 'Daniel Jang', 'Nouar AlDahoul', 'Aaron Kaufman', 'Talal Rahwan', 'Yasir Zaki'],
+        journal: 'arXiv preprint arXiv:2501.17831',
+        year: 2025,
+        pdf: 'https://arxiv.org/pdf/2501.17831.pdf',
+        featured: false
+    },
+
+    {
+        title: 'Neutralizing the Narrative: AI-Powered Debiasing of Online News Articles',
+        authors: ['CW Kuo', 'Kevin Chu', 'Nouar AlDahoul', 'Hazem Ibrahim', 'Talal Rahwan', 'Yasir Zaki'],
+        journal: 'arXiv preprint arXiv:2504.03520',
+        year: 2025,
+        pdf: 'https://arxiv.org/abs/2504.03520',
+        featured: true
+    },
+    {
         title: 'Analyzing political stances on Twitter in the lead-up to the 2024 US election',
         authors: ['Hazem Ibrahim', 'Farhan Khan', 'Hend Alabdouli', 'Maryam Almatrooshi', 'Tran Nguyen', 'Talal Rahwan', 'Yasir Zaki'],
         journal: 'arXiv preprint arXiv:2412.02712',
@@ -24,11 +49,11 @@ const publications = [
         featured: true
     },
     {
-        title: 'Google Scholar is manipulatable',
+        title: 'Citation manipulation through citation mills and pre-print servers',
         authors: ['Hazem Ibrahim', 'Fengyuan Liu', 'Yasir Zaki', 'Talal Rahwan'],
-        journal: 'arXiv preprint arXiv:2402.04607',
-        year: 2024,
-        pdf: 'https://arxiv.org/pdf/2402.04607.pdf',
+        journal: 'Scientific Reports',
+        year: 2025,
+        pdf: 'https://www.nature.com/articles/s41598-025-88709-7',
         featured: true
     },
     {
@@ -87,4 +112,4 @@ const publications = [
 ];
 
 console.log('Publications module loaded:', publications);
-export default publications; 
+export default publications;

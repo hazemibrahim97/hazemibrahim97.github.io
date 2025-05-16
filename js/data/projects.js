@@ -10,8 +10,7 @@ const projects = [
     },
     {
         title: 'Citation Analytics Dashboard',
-        description: 'A citation analytics dashboard using OpenAlex which allows users to explore citation accumulation patterns of their favorite scientists. Using the dashboard, you can see how authors collaborate, where they publish, who they publish with, and who cites them most.',
-        
+        description: 'A citation analytics dashboard using OpenAlex which allows users to explore citation accumulation patterns of their favorite scientists. Using the dashboard, you can see how authors collaborate, where they publish, who they publish with, and who cites them most.',        
         technologies: ['Python', 'OpenAlex', 'Streamlit'],
         github: 'https://github.com/hazemibrahim97/CitationDashboard',
         demo: 'https://citationdashboard.streamlit.app/',
