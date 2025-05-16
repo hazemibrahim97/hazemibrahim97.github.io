@@ -1,13 +1,13 @@
 const news = [
     {
-        date: '2024-05-08',
-        title: 'New paper on arXiv',
+        date: '2025-05-08',
+        title: 'Are LLMs politically moderate?',
         description: "Published our work titled <a href='https://arxiv.org/abs/2505.04171'>Large Language Models are often politically extreme, usually ideologically inconsistent, and persuasive even in informational contexts </a> on arXiv. The paper is currently under review at Science.",
         link: 'https://arxiv.org/abs/2505.04171'
     },
     {
-        date: '2024-05-07',
-        title: 'New paper on arXiv',
+        date: '2025-05-07',
+        title: 'How did TikTok behave during the 2024 U.S. presidential race?',
         description: "Published our work titled <a href='https://arxiv.org/abs/2501.17831'> TikTok's recommendations skewed towards Republican content during the 2024 U.S. presidential race </a> on arXiv. The paper is currently under review at Nature.",
         link: 'https://arxiv.org/abs/2501.17831'
     },
