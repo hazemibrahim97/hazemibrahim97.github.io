@@ -3,108 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hazem's Personal Page</title>
+    <title>Hazem Ibrahim</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <script src="js/main.js" type="module" defer></script>
-    <script src="js/pages/home-page.js" type="module" defer></script>
-    <script src="js/theme.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-content">
-            <div class="theme-toggle">
-                <i class="fas fa-moon"></i>
+    <div class="container">
+        <header class="header">
+            <div class="header-left">
+                <img src="/assets/headshot.jpg" alt="Hazem Ibrahim" class="headshot">
+                <h2>Hazem Ibrahim</h2>
+                <p class="title">Ph.D. Candidate in Computer Science at NYU</p>
+                <p class="email">hazem.ibrahim [at] nyu.edu</p>
+                <div class="header-links">
+                    <a href="https://scholar.google.com/citations?user=gB_u0lcAAAAJ&hl=en" class="header-link" target="_blank">Google Scholar</a>
+                    <span class="link-separator">·</span>
+                    <a href="https://drive.google.com/file/d/1DZWulhmhb1pQsD2Qui8nAszj7GN-7eNV/view?usp=sharing" class="header-link" target="_blank">CV</a>
+                </div>
             </div>
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="news.html">News</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="videos.html">Videos</a></li>
-                <li><a href="cv.html">CV</a></li>
+            <div class="bio">
+                <p>I'm a third-year PhD candidate in Computer Science at NYU Abu Dhabi, where I study how socio-technical systems shape attention, persuasion, and inequality. My work sits at the intersection of artificial intelligence, computational social science, and social/traditional media studies: I build large-scale measurements of platform behavior, probe where algorithms and institutions introduce bias, and design empirical tests that separate noisy anecdotes from durable, causal patterns. Prior to my PhD, I earned a Master's in Computer Science from the University of Toronto,  and a Bachelor's in Computer Engineering from New York University Abu Dhabi.
+                    <br> <br>
+                    My research agenda focuses on three broad themes: (1) auditing recommendation and ranking systems to understand how political information and viewpoints are amplified or suppressed; (2) mapping representation and visibility in media—who appears, how they're framed, and with what downstream consequences; and (3) examining gatekeeping and access in knowledge ecosystems, from scholarly publishing to data availability. I also study ideological behavior in modern large language models, connecting model outputs to real-world persuasion and stance-taking.
+                    <br> <br>
+                    Methodologically, I have utilized large-scale data collection and engineering, network analysis, mixed-effects and causal inference, survey and behavioral experiments, and contemporary NLP/LLM evaluation techniques to investigate these research themes. I aim for reproducible pipelines and policy-relevant findings, pairing observational evidence with experiments whenever possible, releasing tools and code, and collaborating across computer science, information science, and the social sciences. Ultimately, my goal is to develop general, testable frameworks for auditing algorithmic systems and for measuring representation and influence across digital media—work that advances science while informing governance and public debate.</p>
+            </div>
+        </header>
+
+        <section class="research-interests">
+            <h2>Research interests</h2>
+            <div class="interests">
+                <span class="tag">Computational Social Science</span>
+                <span class="tag">AI Ethics</span>
+                <span class="tag">Large Language Models</span>
+                <span class="tag">Algorithmic Bias</span>
+                <span class="tag">Diversity and Equity</span>
+                <span class="tag">Ideological Behavior</span>
+                <span class="tag">Media Studies</span>
+                <span class="tag">Representation and Visibility</span>
+            </div>
+        </section>
+
+        <section class="publications">
+            <h2>Publications</h2>
+
+            <div class="publication">
+              <h3><a href="https://arxiv.org/abs/2505.04171">Large Language Models are often politically extreme, usually ideologically inconsistent, and persuasive even in informational contexts</a></h3>
+              <p class="authors">AlDahoul, N., <strong>Hazem Ibrahim</strong>, Varvello, M., Kaufman, A., Rahwan, T., and Zaki, Y.</p>
+              <p class="journal">Under review at <strong>American Political Science Review</strong></p>
+            </div>
+
+            <div class="publication">
+              <h3><a href="https://arxiv.org/abs/2501.17831">TikTok's recommendations skewed towards Republican content during the 2024 US presidential race</a></h3>
+              <p class="authors"><strong>Hazem Ibrahim</strong>, Jang, H. D., AlDahoul, N., Kaufman, A. R., Rahwan, T., and Zaki, Y.</p>
+              <p class="journal">Under review at <strong>Nature</strong></p>
+            </div>
+
+            <div class="publication">
+              <h3><a href="https://arxiv.org/abs/2509.08299">Causal evidence of racial and institutional biases in accessing paywalled articles and scientific data</a></h3>
+              <p class="authors"><strong>Hazem Ibrahim</strong>, Liu, F., Mengal, K., Kaufman, A., Zaki, Y., and Rahwan, T.</p>
+              <p class="journal">Under review at <strong>Science</strong></p>
+            </div>
+
+            <div class="publication">
+              <h3><a href="https://www.nature.com/articles/s41598-025-88709-7">Citation manipulation through citation mills and pre-print servers</a></h3>
+              <p class="authors"><strong>Hazem Ibrahim</strong>, Liu, F., Zaki, Y., and Rahwan, T.</p>
+              <p class="journal"><strong>Scientific Reports</strong> (2025)</p>
+            </div>
+
+            <div class="publication">
+              <h3><a href="https://arxiv.org/abs/2501.17452">A Tale of Three Location Trackers: AirTag, SmartTag, and Tile</a></h3>
+              <p class="authors">Jang, H. D., <strong>Hazem Ibrahim</strong>, Asim, R., Varvello, M., and Zaki, Y.</p>
+              <p class="journal">Under review at <strong>IEEE Transactions on Mobile Computing</strong></p>
+            </div>
+
+            <div class="publication">
+                <h3><a href="https://www.nature.com/articles/s41598-023-38964-3">Perception, performance, and detectability of conversational artificial intelligence across 32 university courses</a></h3>
+                <p class="authors"><strong>Hazem Ibrahim</strong>, Liu, F., Asim, R., Battu, B., Benabderrahmane, S., Alhafni, B., Adnan, W., Alhanai, T., AlShebli, B., Baghdadi, R., <em>et al.</em></p>
+                <p class="journal"><strong>Scientific Reports</strong> (2023)</p>
+              </div>
+
+            <div class="publication">
+              <h3><a href="https://ieeexplore.ieee.org/abstract/document/10379489/">Big tech dominance despite global mistrust</a></h3>
+              <p class="authors"><strong>Hazem Ibrahim</strong>, Debicki, M., Rahwan, T., and Zaki, Y.</p>
+              <p class="journal"><strong>IEEE Transactions on Computational Social Systems</strong> (2024)</p>
+            </div>
+
+            <div class="publication">
+              <h3><a href="https://academic.oup.com/pnasnexus/article-abstract/2/8/pgad264/7242446">YouTube’s recommendation algorithm is left-leaning in the United States</a></h3>
+              <p class="authors"><strong>Hazem Ibrahim</strong>, AlDahoul, N., Lee, S., Rahwan, T., and Zaki, Y.</p>
+              <p class="journal"><strong>PNAS Nexus</strong> (2023)</p>
+            </div>
+
+            <div class="publication">
+              <h3><a href="https://ieeexplore.ieee.org/abstract/document/10111520/">Rethinking homework in the age of artificial intelligence</a></h3>
+              <p class="authors"><strong>Hazem Ibrahim</strong>, Asim, R., Zaffar, F., Rahwan, T., and Zaki, Y.</p>
+              <p class="journal"><strong>IEEE Intelligent Systems</strong> (2023)</p>
+            </div>
+
+            <div class="publication">
+                <h3><a href="https://dl.acm.org/doi/abs/10.1145/3618257.3624834">I tag, you tag, everybody tags!</a></h3>
+                <p class="authors"><strong>Hazem Ibrahim</strong>, Asim, R., Varvello, M., and Zaki, Y.</p>
+                <p class="journal"><strong>ACM IMC</strong> (2023)</p>
+              </div>
+
+            <div class="publication">
+              <h3><a href="https://ieeexplore.ieee.org/abstract/document/8536491/">Multithreaded and reconvergent aware algorithms for accurate digital circuits reliability estimation</a></h3>
+              <p class="authors">Ibrahim, W., and <strong>Hazem Ibrahim</strong></p>
+              <p class="journal"><strong>IEEE Transactions on Reliability</strong> (2018)</p>
+            </div>
+
+
+        <section class="media-coverage">
+            <h2>Media Coverage and Awards</h2>
+            <div class="media-item">
+                <h3><strong>ChatGPT and Homework</strong></h3>
+                <p>Our paper "Perception, Performance, and Detectability of Conversational Artificial Intelligence Across 32 University Courses" evaluated ChatGPT's ability to solve homework assignment. It was covered by news outlets worldwide: Scientific American, The Times, The Independent, Nature Asia, Government Tech, Daily Mail, The Daily Beast, New Scientist, EurekAlert!, Phys.org, The National, Neuroscience News, Nature Middle East.</p>
+                <div class="media-images">
+                    <a href="https://www.thetimes.co.uk/article/ai-detectors-fail-when-texts-are-run-through-online-grammar-tool-xh5cqtxgp"><img src="/assets/gpt_1.avif" alt="gpt_1" class="media-img"></a>
+                    <a href="https://www.scientificamerican.com/article/chatgpt-can-get-good-grades-what-should-educators-do-about-it/"><img src="/assets/gpt_2.avif" alt="gpt_2" class="media-img"></a>
+                    <a href="https://www.newscientist.com/article/2388789-chatgpt-gets-better-marks-than-students-in-some-university-courses/"><img src="/assets/gpt_3.avif" alt="gpt_3" class="media-img"></a>
+                    <a href="https://www.independent.co.uk/news/uk/politics/chatgpt-research-department-for-education-b2398826.html"><img src="/assets/gpt_4.png" alt="gpt_3" class="media-img"></a>
+                    <a href="https://www.natureasia.com/ar/nmiddleeast/article/10.1038/nmiddleeast.2023.154"><img src="/assets/gpt_5.png" alt="gpt_3" class="media-img"></a>
+                    <a href="https://www.natureasia.com/ja-jp/research/highlight/14624"><img src="/assets/gpt_6.png" alt="gpt_3" class="media-img"></a>
+                </div>
+            </div>
+
+            <div class="media-item">
+                <h3><strong>TikTok's recommendations skewed towards Republican content during the 2024 US presidential race</strong></h3>
+                <p> Using 323 independent bot-driven audits, we tracked changes in TikTok's recommendation algorithm in the six months prior to the 2024 US presidential race. Our findings were covered by PsyPost, Der Standard, and NextShark.</p>
+                <div class="media-images" align="center">
+                    <a href="https://www.psypost.org/tiktoks-algorithm-exhibited-pro-republican-bias-during-2024-presidential-race-study-finds/"><img src="/assets/tiktok_1.png" alt="tiktok_1" class="media-img"></a>
+                    <a href="https://www.derstandard.at/story/3000000256046/wie-tiktok-im-us-wahlkampf-die-republikaner-unterstuetzt-haben-soll"><img src="/assets/tiktok_2.png" alt="tiktok_2" class="media-img"></a>
+                    <a href="https://www.yahoo.com/news/tiktok-algorithm-shows-bias-political-154014827.html?guccounter=1"><img src="/assets/tiktok_3.png" alt="tiktok_3" class="media-img"></a>
+                </div>
+            </div>
+
+
+            <div class="media-item">
+                <h3><strong>Citation manipulation</strong></h3>
+                <p>We went under cover, contacted a "citation boosting service", and managed to buy citations that appeared in a Scopus-Indexed journal. Our sting operation provided conclusive evidence that citations can be bought in bulk. The findings were covered by Nature and Science. </p>
+                <div class="media-images" align="center">
+                    <a href="https://www.science.org/content/article/vendor-offering-citations-purchase-latest-bad-actor-scholarly-publishing"><img src="/assets/scholar_1.avif" alt="scholar_1" class="media-img"></a>
+                    <a href="https://www.nature.com/articles/d41586-024-01672-7"><img src="/assets/scholar_2.avif" alt="scholar_2" class="media-img"></a>
+                    <a href="https://www.science.org/content/article/how-easy-it-fudge-your-scientific-rank-meet-larry-world-s-most-cited-cat"><img src="/assets/scholar_3.avif" alt="scholar_3" class="media-img"></a>
+                </div>
+            </div>
+
+            <div class="media-item">
+                <h3><strong>YouTube's recommendation algorithm is left-leaning in the United States</strong></h3>
+                <p> Our paper "YouTube’s recommendation algorithm is left-leaning in the United States" revealed a political bias in YouTube's algorithm. The paper was published in PNAS Nexus, and received media coverage from Daily Caller, American Council on Science and Health, The College Fix, PsyPost.</p>
+                <div class="media-images" align="center">
+                    <a href="https://www.psypost.org/2023/09/youtubes-recommendation-system-exhibits-left-leaning-bias-new-study-suggests-195536"><img src="/assets/youtube_1.avif" alt="youtube_1" class="media-img"></a>
+                    <a href="https://www.acsh.org/news/2023/08/28/counter-intuitive-bias-youtube%E2%80%99s-algorithm-17291"><img src="/assets/youtube_2.avif" alt="youtube_2" class="media-img"></a>
+                    <a href="https://dailycaller.com/2023/08/22/youtube-algorithm-has-a-left-wing-bias-researchers-find/"><img src="/assets/youtube_3.avif" alt="youtube_3" class="media-img"></a>
+                </div>
+            </div>
+
+            <div class="media-item">
+                <h3><strong>MIT Innovator Under 35 Award</strong></h3>
+                <p>I was awarded the MIT Innovator Under 35 Award in 2023 for my work on large language models and its imapct on university education.</p>
+                <div class="media-images" align="center">
+                    <a href="https://majarra.com/en/about/news/%D8%A5%D8%B9%D9%84%D8%A7%D9%86-%D9%82%D8%A7%D8%A6%D9%85%D8%A9-%D8%A7%D9%84%D9%81%D8%A7%D8%A6%D8%B2%D9%8A%D9%86-%D8%A8%D8%AC%D8%A7%D8%A6%D8%B2%D8%A9-%22%D9%85%D8%A8%D8%AA%D9%83%D8%B1%D9%88%D9%86-%D8%AF%D9%88%D9%86-35%22-%D9%84%D8%B9%D8%A7%D9%85-2023?from=home_page"><img src="/assets/mit_media_award.png" alt="MIT Innovator Under 35 Award" class="media-img"></a>
+                </div>
+            </div>
+
+            <div class="media-item">
+                <h3><strong>Best Parallel Talk and Best Poster Awards at IC2S2 2024</strong></h3>
+                <p>I was awarded the Best Parallel Talk and Best Poster Awards at IC2S2 2024.</p>
+                <div class="media-images" align="center">
+                    <a href="https://ic2s2-2024.org/awards"><img src="/assets/ic2s2_award.avif" alt="IC2S2 Awards" class="media-img"></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="works-in-progress">
+            <h2>Works in progress</h2>
+            <!-- Working Papers -->
+            <div class="publication">
+                <h3>Inclusive content reduces racial and gender biases, yet non-inclusive content dominates popular media outlets</h3>
+                <p class="authors">AlDahoul, N., <strong>Hazem Ibrahim</strong>, Park, M., Rahwan, T., and Zaki, Y.</p>
+                <p class="journal"><strong>Working paper</strong></p>
+              </div>
+
+              <div class="publication">
+                <h3>Who Gets Seen in the Age of AI? Adoption Patterns of Large Language Models in Scholarly Writing and Citation Outcomes</h3>
+                <p class="authors">Farhan, K., <strong>Hazem Ibrahim</strong>, Rahwan, T., and Zaki, Y.</p>
+                <p class="journal"><strong>Working paper</strong></p>
+              </div>
+
+              <div class="publication">
+                <h3>A longitudinal analysis of racial and gender bias in New York Times and Fox News images and articles</h3>
+                <p class="authors"><strong>Hazem Ibrahim</strong>, AlDahoul, N., Abbasi, S. M. A., Zaffar, F., Rahwan, T., and Zaki, Y.</p>
+                <p class="journal"><strong>Working paper</strong></p>
+              </div>
+
+              <div class="publication">
+                <h3>Structural Inequalities in Hollywood Representation Across a Century of Film</h3>
+                <p class="authors"><strong>Hazem Ibrahim</strong>, AlDahoul, N., Rahwan, T., Zaki, Y., and Park, M.</p>
+                <p class="journal"><strong>Working paper</strong></p>
+              </div>
+
+              <div class="publication">
+                <h3>Analyzing political stances on Twitter in the lead-up to the 2024 US election</h3>
+                <p class="authors"><strong>Hazem Ibrahim</strong>, Khan, F., Alabdouli, H., Almatrooshi, M., Nguyen, T., Rahwan, T., and Zaki, Y.</p>
+                <p class="journal"><strong>Working paper</strong></p>
+              </div>
+
+              <div class="publication">
+                <h3>Neutralizing the Narrative: AI-Powered Debiasing of Online News Articles</h3>
+                <p class="authors">Kuo, C. W., Chu, K., AlDahoul, N., <strong>Hazem Ibrahim</strong>, Rahwan, T., and Zaki, Y.</p>
+                <p class="journal"><strong>Working paper</strong></p>
+              </div>
+            </section>
+        </section>
+
+        <section class="teaching-service">
+            <h2>Teaching & Service</h2>
+
+            <h3>Teaching</h3>
+            <ul>
+              <li><em>Instructor</em>, CS-UH 1001 – <strong>Introduction to Computer Science</strong> – NYU Abu Dhabi (Fall 2020, Summer 2021, Fall 2021)</li>
+              <li><em>Instructor</em>, CS-UH 1002 – <strong>Discrete Mathematics</strong> – NYU Abu Dhabi (Fall 2021, Spring 2022, Summer 2022)</li>
+              <li><em>Instructor</em>, CS-UH 1050 – <strong>Data Structures</strong> – NYU Abu Dhabi (Spring 2021, Fall 2021)</li>
+              <li><em>Instructor</em>, CS-UH 2214 – <strong>Database Systems</strong> – NYU Abu Dhabi (Fall 2021, Spring 2022)</li>
+              <li><em>Instructor</em>, CS-UH 2220 – <strong>Machine Learning</strong> – NYU Abu Dhabi (Spring 2022)</li>
+              <li><em>Instructor</em>, CS-UH 2219E – <strong>Computational Social Science</strong> – NYU Abu Dhabi (Spring 2021, Fall 2021)</li>
+              <li><em>Teaching Assistant</em>, CSC148H – <strong>Introduction to Computer Science</strong> – University of Toronto (Spring 2018, Fall 2018, Fall 2019)</li>
             </ul>
-        </div>
-    </nav>
 
-    <main>
-        <section id="bio" class="section">
-            <div class="container">
-                <div class="bio-content">
-                    <div class="bio-image">
-                        <img src="./assets/hazem.jpg" alt="Hazem Ibrahim">
-                    </div>
-                    <div class="bio-text">
-                        <h1>Hazem Ibrahim</h1>
-                        <div class="social-icons">
-                            <a href="https://scholar.google.com/citations?user=gB_u0lcAAAAJ&hl=en" target="_blank" aria-label="Google Scholar">
-                                <i class="ai ai-google-scholar"></i>
-                            </a>
-                        </div>
-                        <p class="description">
-                            Hi! I'm Hazem, a second year Ph.D candidate at NYU studying Computer Science, with a specific focus on Computational Social Science. <br><br>
-                            My research interests lie in understanding the societal impact of technology, from discerning the existence of algorithmic bias in recommendation systems, to the misuse of technology in academic/pedagogical contexts. Currently, my work is focused on understanding how ethnic and gender representations have changed in popular forms of media, such as in movies or fashion magazines, and how these different groups are presented contextually. <br><br>
-                            Outside of academia, I've also coached the three New York University Abu Dhabi varsity basketball teams, winning the Abu Dhabi Intercollegiate Sports League title in 2022-2023. <br><br>
-                            Email: hazem.ibrahim [at] nyu.edu
+            <h3>Academic Advising</h3>
+            <ul>
+              <li>Undergraduate Thesis Advisor – Farhan Kamrul Khan, Chen Wei Kuo, and Kevin Chu (NYU Abu Dhabi, 2025)</li>
+            </ul>
 
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <h3>Service</h3>
+            <ul>
+              <li><strong>Reviewer</strong>: ICWSM, IC2S2, WebConf</li>
+            </ul>
+          </section>
 
-        <section id="recent-news" class="section">
-            <div class="container">
-                <h2>Recent News</h2>
-                <div class="news-grid">
-                    <!-- News items will be loaded from news.js -->
-                </div>
-                <a href="news.html" class="view-all">View All News →</a>
-            </div>
-        </section>
-
-        <section id="selected-publications" class="section">
-            <div class="container">
-                <h2>Latest Publications</h2>
-                <div class="publications-grid">
-                    <!-- Publications will be loaded from publications.js -->
-                </div>
-                <a href="publications.html" class="view-all">View All Publications →</a>
-            </div>
-        </section>
-
-        <section id="featured-projects" class="section">
-            <div class="container">
-                <h2>Personal Projects</h2>
-                <div class="projects-grid">
-                    <!-- Projects will be loaded from projects.js -->
-                </div>
-                <a href="projects.html" class="view-all">View All Projects →</a>
-            </div>
-        </section>
-
-        <section id="featured-videos" class="section">
-            <div class="container">
-                <h2>Videos</h2>
-                <div class="videos-grid">
-                    <!-- Videos will be loaded from videos.js -->
-                </div>
-                <!-- <a href="videos.html" class="view-all">View All Videos →</a> -->
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-
-        </div>
-    </footer>
+        <footer class="footer">
+            <p>Last updated: [October 2025] · © Hazem Ibrahim</p>
+        </footer>
+    </div>
 </body>
 </html>
