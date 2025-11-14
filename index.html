@@ -8,12 +8,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        body { opacity: 0; transition: opacity 0.5s ease-in; }
+        body.loaded { opacity: 1; }
+    </style>
 </head>
 <body>
+    <script>
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+    </script>
     <div class="container">
         <header class="header">
             <div class="header-left">
-                <img src="/assets/headshot.jpg" alt="Hazem Ibrahim" class="headshot">
+                <img src="assets/headshot.jpg" alt="Hazem Ibrahim" class="headshot">
                 <h2>Hazem Ibrahim</h2>
                 <p class="title">Ph.D. Candidate in Computer Science at NYU</p>
                 <p class="email">hazem.ibrahim [at] nyu.edu</p>
@@ -122,12 +131,12 @@
                 <h3><strong>ChatGPT and Homework</strong></h3>
                 <p>Our paper "Perception, Performance, and Detectability of Conversational Artificial Intelligence Across 32 University Courses" evaluated ChatGPT's ability to solve homework assignment. It was covered by news outlets worldwide: Scientific American, The Times, The Independent, Nature Asia, Government Tech, Daily Mail, The Daily Beast, New Scientist, EurekAlert!, Phys.org, The National, Neuroscience News, Nature Middle East.</p>
                 <div class="media-images">
-                    <a href="https://www.thetimes.co.uk/article/ai-detectors-fail-when-texts-are-run-through-online-grammar-tool-xh5cqtxgp"><img src="/assets/gpt_1.avif" alt="gpt_1" class="media-img"></a>
-                    <a href="https://www.scientificamerican.com/article/chatgpt-can-get-good-grades-what-should-educators-do-about-it/"><img src="/assets/gpt_2.avif" alt="gpt_2" class="media-img"></a>
-                    <a href="https://www.newscientist.com/article/2388789-chatgpt-gets-better-marks-than-students-in-some-university-courses/"><img src="/assets/gpt_3.avif" alt="gpt_3" class="media-img"></a>
-                    <a href="https://www.independent.co.uk/news/uk/politics/chatgpt-research-department-for-education-b2398826.html"><img src="/assets/gpt_4.png" alt="gpt_3" class="media-img"></a>
-                    <a href="https://www.natureasia.com/ar/nmiddleeast/article/10.1038/nmiddleeast.2023.154"><img src="/assets/gpt_5.png" alt="gpt_3" class="media-img"></a>
-                    <a href="https://www.natureasia.com/ja-jp/research/highlight/14624"><img src="/assets/gpt_6.png" alt="gpt_3" class="media-img"></a>
+                    <a href="https://www.thetimes.co.uk/article/ai-detectors-fail-when-texts-are-run-through-online-grammar-tool-xh5cqtxgp"><img src="assets/gpt_1.avif" alt="gpt_1" class="media-img"></a>
+                    <a href="https://www.scientificamerican.com/article/chatgpt-can-get-good-grades-what-should-educators-do-about-it/"><img src="assets/gpt_2.avif" alt="gpt_2" class="media-img"></a>
+                    <a href="https://www.newscientist.com/article/2388789-chatgpt-gets-better-marks-than-students-in-some-university-courses/"><img src="assets/gpt_3.avif" alt="gpt_3" class="media-img"></a>
+                    <a href="https://www.independent.co.uk/news/uk/politics/chatgpt-research-department-for-education-b2398826.html"><img src="assets/gpt_4.png" alt="gpt_3" class="media-img"></a>
+                    <a href="https://www.natureasia.com/ar/nmiddleeast/article/10.1038/nmiddleeast.2023.154"><img src="assets/gpt_5.png" alt="gpt_3" class="media-img"></a>
+                    <a href="https://www.natureasia.com/ja-jp/research/highlight/14624"><img src="assets/gpt_6.png" alt="gpt_3" class="media-img"></a>
                 </div>
             </div>
 
@@ -135,9 +144,9 @@
                 <h3><strong>TikTok's recommendations skewed towards Republican content during the 2024 US presidential race</strong></h3>
                 <p> Using 323 independent bot-driven audits, we tracked changes in TikTok's recommendation algorithm in the six months prior to the 2024 US presidential race. Our findings were covered by PsyPost, Der Standard, and NextShark.</p>
                 <div class="media-images" align="center">
-                    <a href="https://www.psypost.org/tiktoks-algorithm-exhibited-pro-republican-bias-during-2024-presidential-race-study-finds/"><img src="/assets/tiktok_1.png" alt="tiktok_1" class="media-img"></a>
-                    <a href="https://www.derstandard.at/story/3000000256046/wie-tiktok-im-us-wahlkampf-die-republikaner-unterstuetzt-haben-soll"><img src="/assets/tiktok_2.png" alt="tiktok_2" class="media-img"></a>
-                    <a href="https://www.yahoo.com/news/tiktok-algorithm-shows-bias-political-154014827.html?guccounter=1"><img src="/assets/tiktok_3.png" alt="tiktok_3" class="media-img"></a>
+                    <a href="https://www.psypost.org/tiktoks-algorithm-exhibited-pro-republican-bias-during-2024-presidential-race-study-finds/"><img src="assets/tiktok_1.png" alt="tiktok_1" class="media-img"></a>
+                    <a href="https://www.derstandard.at/story/3000000256046/wie-tiktok-im-us-wahlkampf-die-republikaner-unterstuetzt-haben-soll"><img src="assets/tiktok_2.png" alt="tiktok_2" class="media-img"></a>
+                    <a href="https://www.yahoo.com/news/tiktok-algorithm-shows-bias-political-154014827.html?guccounter=1"><img src="assets/tiktok_3.png" alt="tiktok_3" class="media-img"></a>
                 </div>
             </div>
 
@@ -146,9 +155,9 @@
                 <h3><strong>Citation manipulation</strong></h3>
                 <p>We went under cover, contacted a "citation boosting service", and managed to buy citations that appeared in a Scopus-Indexed journal. Our sting operation provided conclusive evidence that citations can be bought in bulk. The findings were covered by Nature and Science. </p>
                 <div class="media-images" align="center">
-                    <a href="https://www.science.org/content/article/vendor-offering-citations-purchase-latest-bad-actor-scholarly-publishing"><img src="/assets/scholar_1.avif" alt="scholar_1" class="media-img"></a>
-                    <a href="https://www.nature.com/articles/d41586-024-01672-7"><img src="/assets/scholar_2.avif" alt="scholar_2" class="media-img"></a>
-                    <a href="https://www.science.org/content/article/how-easy-it-fudge-your-scientific-rank-meet-larry-world-s-most-cited-cat"><img src="/assets/scholar_3.avif" alt="scholar_3" class="media-img"></a>
+                    <a href="https://www.science.org/content/article/vendor-offering-citations-purchase-latest-bad-actor-scholarly-publishing"><img src="assets/scholar_1.avif" alt="scholar_1" class="media-img"></a>
+                    <a href="https://www.nature.com/articles/d41586-024-01672-7"><img src="assets/scholar_2.avif" alt="scholar_2" class="media-img"></a>
+                    <a href="https://www.science.org/content/article/how-easy-it-fudge-your-scientific-rank-meet-larry-world-s-most-cited-cat"><img src="assets/scholar_3.avif" alt="scholar_3" class="media-img"></a>
                 </div>
             </div>
 
@@ -156,9 +165,9 @@
                 <h3><strong>YouTube's recommendation algorithm is left-leaning in the United States</strong></h3>
                 <p> Our paper "YouTube’s recommendation algorithm is left-leaning in the United States" revealed a political bias in YouTube's algorithm. The paper was published in PNAS Nexus, and received media coverage from Daily Caller, American Council on Science and Health, The College Fix, PsyPost.</p>
                 <div class="media-images" align="center">
-                    <a href="https://www.psypost.org/2023/09/youtubes-recommendation-system-exhibits-left-leaning-bias-new-study-suggests-195536"><img src="/assets/youtube_1.avif" alt="youtube_1" class="media-img"></a>
-                    <a href="https://www.acsh.org/news/2023/08/28/counter-intuitive-bias-youtube%E2%80%99s-algorithm-17291"><img src="/assets/youtube_2.avif" alt="youtube_2" class="media-img"></a>
-                    <a href="https://dailycaller.com/2023/08/22/youtube-algorithm-has-a-left-wing-bias-researchers-find/"><img src="/assets/youtube_3.avif" alt="youtube_3" class="media-img"></a>
+                    <a href="https://www.psypost.org/2023/09/youtubes-recommendation-system-exhibits-left-leaning-bias-new-study-suggests-195536"><img src="assets/youtube_1.avif" alt="youtube_1" class="media-img"></a>
+                    <a href="https://www.acsh.org/news/2023/08/28/counter-intuitive-bias-youtube%E2%80%99s-algorithm-17291"><img src="assets/youtube_2.avif" alt="youtube_2" class="media-img"></a>
+                    <a href="https://dailycaller.com/2023/08/22/youtube-algorithm-has-a-left-wing-bias-researchers-find/"><img src="assets/youtube_3.avif" alt="youtube_3" class="media-img"></a>
                 </div>
             </div>
 
@@ -166,7 +175,7 @@
                 <h3><strong>MIT Innovator Under 35 Award</strong></h3>
                 <p>I was awarded the MIT Innovator Under 35 Award in 2023 for my work on large language models and its imapct on university education.</p>
                 <div class="media-images" align="center">
-                    <a href="https://majarra.com/en/about/news/%D8%A5%D8%B9%D9%84%D8%A7%D9%86-%D9%82%D8%A7%D8%A6%D9%85%D8%A9-%D8%A7%D9%84%D9%81%D8%A7%D8%A6%D8%B2%D9%8A%D9%86-%D8%A8%D8%AC%D8%A7%D8%A6%D8%B2%D8%A9-%22%D9%85%D8%A8%D8%AA%D9%83%D8%B1%D9%88%D9%86-%D8%AF%D9%88%D9%86-35%22-%D9%84%D8%B9%D8%A7%D9%85-2023?from=home_page"><img src="/assets/mit_media_award.png" alt="MIT Innovator Under 35 Award" class="media-img"></a>
+                    <a href="https://majarra.com/en/about/news/%D8%A5%D8%B9%D9%84%D8%A7%D9%86-%D9%82%D8%A7%D8%A6%D9%85%D8%A9-%D8%A7%D9%84%D9%81%D8%A7%D8%A6%D8%B2%D9%8A%D9%86-%D8%A8%D8%AC%D8%A7%D8%A6%D8%B2%D8%A9-%22%D9%85%D8%A8%D8%AA%D9%83%D8%B1%D9%88%D9%86-%D8%AF%D9%88%D9%86-35%22-%D9%84%D8%B9%D8%A7%D9%85-2023?from=home_page"><img src="assets/mit_media_award.png" alt="MIT Innovator Under 35 Award" class="media-img-large media-img"></a>
                 </div>
             </div>
 
@@ -174,7 +183,7 @@
                 <h3><strong>Best Parallel Talk and Best Poster Awards at IC2S2 2024</strong></h3>
                 <p>I was awarded the Best Parallel Talk and Best Poster Awards at IC2S2 2024.</p>
                 <div class="media-images" align="center">
-                    <a href="https://ic2s2-2024.org/awards"><img src="/assets/ic2s2_award.avif" alt="IC2S2 Awards" class="media-img"></a>
+                    <a href="https://ic2s2-2024.org/awards"><img src="assets/ic2s2_award.avif" alt="IC2S2 Awards" class="media-img"></a>
                 </div>
             </div>
         </section>
