@@ -582,6 +582,7 @@ h3 {
 
     .media-images a {
         flex: 0 0 100%;
+        max-width: 300px;
     }
 
     .media-img {
