@@ -4,6 +4,40 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f5f5f7;
+    --text-primary: #1d1d1f;
+    --text-secondary: #86868b;
+    --text-tertiary: #d2d2d7;
+    --link-color: #0071e3;
+    --link-hover: #0077ed;
+    --border-color: #d2d2d7;
+    --tag-bg: #f5f5f7;
+    --tag-hover: #e8e8ed;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.12);
+    --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+html[data-theme="dark"] {
+    --bg-primary: #0f0f0f;
+    --bg-secondary: #1c1c1e;
+    --text-primary: #f5f5f7;
+    --text-secondary: #98989d;
+    --text-tertiary: #48484a;
+    --link-color: #2997ff;
+    --link-hover: #409cff;
+    --border-color: #38383a;
+    --tag-bg: #1c1c1e;
+    --tag-hover: #2c2c2e;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.5);
+    --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -11,18 +45,19 @@ html {
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Segoe UI', sans-serif;
     line-height: 1.6;
-    color: #1d1d1f;
-    background: #ffffff;
+    color: var(--text-primary);
+    background: var(--bg-primary);
     padding: 0;
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
     max-width: 980px;
     margin: 0 auto;
-    background: #ffffff;
+    background: var(--bg-primary);
     padding: 80px 60px 60px;
     animation: fadeIn 0.6s ease-out;
 }
@@ -59,12 +94,12 @@ body {
     object-fit: cover;
     border: none;
     margin-bottom: 24px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-md);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .headshot:hover {
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--shadow-lg);
 }
 
 .header-left h2 {
@@ -90,7 +125,7 @@ body {
 }
 
 .header-link {
-    color: #0071e3;
+    color: var(--link-color);
     text-decoration: none;
     font-weight: 400;
     transition: all 0.2s ease;
@@ -99,13 +134,58 @@ body {
 }
 
 .header-link:hover {
-    color: #0077ed;
+    color: var(--link-hover);
     text-decoration: underline;
 }
 
 .link-separator {
     margin: 0 10px;
-    color: #d2d2d7;
+    color: var(--text-tertiary);
+}
+
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    margin-left: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    vertical-align: middle;
+    position: relative;
+    top: -3px;
+    left: 5px;
+}
+
+.dark-mode-toggle:hover {
+    color: var(--text-primary);
+    background: var(--tag-hover);
+}
+
+.dark-mode-toggle svg {
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease;
+}
+
+.sun-icon {
+    display: none;
+}
+
+.moon-icon {
+    display: block;
+}
+
+html[data-theme="dark"] .sun-icon {
+    display: block;
+}
+
+html[data-theme="dark"] .moon-icon {
+    display: none;
 }
 
 .header .bio {
@@ -118,7 +198,7 @@ body {
 .header .bio p {
     margin: 0 0 16px 0;
     font-size: 1.05em;
-    color: #1d1d1f;
+    color: var(--text-primary);
     font-weight: 400;
 }
 
@@ -130,7 +210,7 @@ h1 {
     font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
     font-size: 3em;
     margin-bottom: 8px;
-    color: #1d1d1f;
+    color: var(--text-primary);
     margin-top: 0;
     font-weight: 700;
     letter-spacing: -1.5px;
@@ -139,7 +219,7 @@ h1 {
 
 .title {
     font-size: 1.25em;
-    color: #86868b;
+    color: var(--text-secondary);
     margin-bottom: 8px;
     font-weight: 500;
     line-height: 1.4;
@@ -147,7 +227,7 @@ h1 {
 
 .email {
     font-size: 1em;
-    color: #86868b;
+    color: var(--text-secondary);
     font-style: normal;
     font-weight: 400;
 }
@@ -175,7 +255,7 @@ h2 {
     font-size: 2.5em;
     margin-bottom: 32px;
     margin-top: 80px;
-    color: #1d1d1f;
+    color: var(--text-primary);
     font-weight: 700;
     letter-spacing: -1px;
     line-height: 1.1;
@@ -189,7 +269,7 @@ h2 {
 h3 {
     font-size: 1.3em;
     margin-bottom: 10px;
-    color: #1d1d1f;
+    color: var(--text-primary);
     font-weight: 600;
 }
 
@@ -200,14 +280,14 @@ h3 {
 }
 
 .publication h3 a {
-    color: #1d1d1f;
+    color: var(--text-primary);
     text-decoration: none;
     transition: color 0.2s ease;
     font-weight: 600;
 }
 
 .publication h3 a:hover {
-    color: #0071e3;
+    color: var(--link-color);
 }
 
 .research-interests {
@@ -224,11 +304,11 @@ h3 {
 }
 
 .tag {
-    background: #f5f5f7;
+    background: var(--tag-bg);
     padding: 6px 14px;
     border-radius: 16px;
     font-size: 0.9em;
-    color: #1d1d1f;
+    color: var(--text-primary);
     border: none;
     transition: all 0.2s ease;
     cursor: default;
@@ -236,13 +316,13 @@ h3 {
 }
 
 .tag:hover {
-    background: #e8e8ed;
+    background: var(--tag-hover);
 }
 
 .publication {
-    margin-bottom: 32px;
-    padding: 0;
-    border-bottom: none;
+    margin-bottom: 0;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border-color);
     border-radius: 0;
     transition: all 0.2s ease;
 }
@@ -254,25 +334,35 @@ h3 {
 
 .publication:last-child {
     border-bottom: none;
+    padding-bottom: 0;
+}
+
+.publication:first-child {
+    padding-top: 0;
 }
 
 .authors {
     margin: 4px 0;
-    color: #86868b;
+    color: var(--text-secondary);
     font-size: 0.95em;
     font-weight: 400;
+}
+
+.authors strong {
+    color: var(--text-primary);
+    font-weight: 600;
 }
 
 .journal {
     margin: 4px 0;
     font-style: italic;
-    color: #86868b;
+    color: var(--text-secondary);
     font-size: 0.9em;
     font-weight: 400;
 }
 
 .journal strong {
-    color: #1d1d1f;
+    color: var(--text-primary);
     font-weight: 600;
 }
 
@@ -282,14 +372,14 @@ h3 {
 }
 
 .link {
-    color: #0071e3;
+    color: var(--link-color);
     text-decoration: none;
     font-weight: 400;
     transition: color 0.2s;
 }
 
 .link:hover {
-    color: #0077ed;
+    color: var(--link-hover);
     text-decoration: underline;
 }
 
@@ -302,7 +392,7 @@ h3 {
     margin-bottom: 10px;
     padding-left: 0;
     position: relative;
-    color: #1d1d1f;
+    color: var(--text-primary);
     font-weight: 400;
 }
 
@@ -313,7 +403,7 @@ h3 {
 .teaching-service h3 {
     margin-top: 48px;
     margin-bottom: 20px;
-    color: #1d1d1f;
+    color: var(--text-primary);
     font-weight: 600;
     font-size: 1.5em;
 }
@@ -341,7 +431,7 @@ h3 {
 .media-item h3 {
     margin-top: 0;
     margin-bottom: 12px;
-    color: #1d1d1f;
+    color: var(--text-primary);
     font-size: 1.2em;
     font-weight: 600;
 }
@@ -349,13 +439,13 @@ h3 {
 .media-item p {
     margin-bottom: 16px;
     line-height: 1.6;
-    color: #1d1d1f;
+    color: var(--text-primary);
     font-weight: 400;
 }
 
 .media-outlets {
     margin-bottom: 15px;
-    color: #86868b;
+    color: var(--text-secondary);
     font-size: 0.9em;
 }
 
@@ -376,15 +466,15 @@ h3 {
 .media-img {
     width: 100%;
     height: auto;
-    border: 1px solid #d2d2d7;
+    border: 1px solid var(--border-color);
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    box-shadow: var(--shadow-sm);
     transition: all 0.3s ease;
     display: block;
 }
 
 .media-img:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-hover);
     transform: translateY(-2px);
 }
 
@@ -392,21 +482,21 @@ h3 {
     text-align: center;
     padding-top: 80px;
     padding-bottom: 40px;
-    border-top: 1px solid #d2d2d7;
+    border-top: 1px solid var(--border-color);
     margin-top: 80px;
-    color: #86868b;
+    color: var(--text-secondary);
     font-size: 0.85em;
 }
 
 .footer a {
-    color: #0071e3;
+    color: var(--link-color);
     text-decoration: none;
     font-weight: 400;
     transition: color 0.2s;
 }
 
 .footer a:hover {
-    color: #0077ed;
+    color: var(--link-hover);
     text-decoration: underline;
 }
 
