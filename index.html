@@ -1,314 +1,1755 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hazem Ibrahim</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
-    <style>
-        body { opacity: 0; transition: opacity 0.5s ease-in; }
-        body.loaded { opacity: 1; }
-    </style>
-</head>
-<body>
-    <script>
-        window.addEventListener('load', function() {
-            document.body.classList.add('loaded');
-        });
-        document.addEventListener('DOMContentLoaded', function() {
-            const darkModeToggle = document.getElementById('darkModeToggle');
-            const html = document.documentElement;
-            const currentTheme = localStorage.getItem('theme') || 'light';
-            html.setAttribute('data-theme', currentTheme);
-            darkModeToggle.addEventListener('click', function() {
-                const currentTheme = html.getAttribute('data-theme');
-                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-                html.setAttribute('data-theme', newTheme);
-                localStorage.setItem('theme', newTheme);
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hazem Ibrahim</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+            media="print"
+            onload="this.media = 'all'"
+        />
+        <noscript
+            ><link
+                href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+                rel="stylesheet"
+        /></noscript>
+        <style>
+            body {
+                opacity: 0;
+                transition: opacity 0.5s ease-in;
+            }
+            body.loaded {
+                opacity: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            window.addEventListener("load", function () {
+                document.body.classList.add("loaded");
             });
-        });
-    </script>
-    <div class="container">
-        <header class="header">
-            <div class="header-left">
-                <img src="assets/headshot.jpg" alt="Hazem Ibrahim" class="headshot" width="200" height="200">
-                <h2>Hazem Ibrahim</h2>
-                <p class="title">Ph.D. Candidate in Computer Science at NYU</p>
-                <p class="email">hazem.ibrahim [at] nyu.edu</p>
-                <div class="header-links">
-                    <a href="https://scholar.google.com/citations?user=gB_u0lcAAAAJ&hl=en" class="header-link" target="_blank">Google Scholar</a>
-                    <span class="link-separator">&middot;</span>
-                    <a href="https://drive.google.com/file/d/1_Rygc5c2oy4I9Bgf7o7D77XPQa11Tijk/view?usp=sharing" class="header-link" target="_blank">CV</a>
-                    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
-                        <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/>
-                            <path d="M10 2V4M10 16V18M18 10H16M4 10H2M15.657 4.343L14.243 5.757M5.757 14.243L4.343 15.657M15.657 15.657L14.243 14.243M5.757 5.757L4.343 4.343" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </script>
+        <div class="container">
+            <header class="header">
+                <div class="header-left">
+                    <img
+                        src="assets/headshot.jpg"
+                        alt="Hazem Ibrahim"
+                        class="headshot"
+                        width="200"
+                        height="200"
+                    />
+                    <h2>Hazem Ibrahim</h2>
+                    <p class="title">
+                        Ph.D. Candidate in Computer Science at NYU
+                    </p>
+                    <p class="email">hazem.ibrahim [at] nyu.edu</p>
+                    <div class="header-links">
+                        <a
+                            href="https://scholar.google.com/citations?user=gB_u0lcAAAAJ&hl=en"
+                            class="header-link"
+                            target="_blank"
+                            >Google Scholar</a
+                        >
+                        <span class="link-separator">&middot;</span>
+                        <a
+                            href="https://drive.google.com/file/d/1_Rygc5c2oy4I9Bgf7o7D77XPQa11Tijk/view?usp=sharing"
+                            class="header-link"
+                            target="_blank"
+                            >CV</a
+                        >
+                    </div>
+                </div>
+                <div class="bio">
+                    <p>
+                        I'm a PhD candidate in Computer Science at NYU, where I
+                        study how algorithms, data, and institutions create
+                        systematic inequalities in who is seen, heard, and
+                        valued. My work treats bias in socio-technical
+                        systems&mdash;social-media platforms, large language
+                        models, academic publishing&mdash;not as a bug in a
+                        single model but as an emergent property of tightly
+                        coupled computational and social processes. <br /><br />
+                        My research is organized around three mechanisms:
+                        <strong>visibility bias</strong> (who sees what
+                        information),
+                        <strong>representational bias</strong> (how groups are
+                        portrayed), and <strong>institutional bias</strong> (how
+                        credit, access, and evaluation are allocated). I study
+                        these through an end-to-end approach that moves from
+                        measurement&mdash;building large-scale datasets and
+                        quantifying inequalities&mdash;to
+                        causation&mdash;designing field experiments and
+                        algorithmic audits that isolate how platform rules and
+                        human decisions jointly produce bias&mdash;to
+                        mitigation&mdash;proposing algorithmic and policy
+                        interventions. This work spans two empirical domains:
+                        social media and LLMs (auditing recommendation
+                        algorithms on YouTube and TikTok, measuring the
+                        political behavior of LLMs) and academia and
+                        bibliographic systems (uncovering citation manipulation
+                        and demonstrating racial and institutional biases in
+                        access to scientific knowledge). <br /><br />
+                        My findings have been published in Nature, PNAS Nexus,
+                        Scientific Reports, and IEEE, and covered by outlets
+                        including Nature, Science, Scientific American, The
+                        Guardian, The Telegraph, and The Times. I was named to
+                        MIT Technology Review's Innovators Under 35 list in
+                        2023. Prior to my PhD, I earned an M.Sc. from the
+                        University of Toronto and a B.Sc. from NYU Abu Dhabi.
+                    </p>
+                </div>
+            </header>
+
+            <section class="publications">
+                <h2>Publications</h2>
+                <h3>Published</h3>
+
+                <div class="pub-card" onclick="toggleCard(this)">
+                    <div class="pub-card-header">
+                        <div class="pub-card-header-content">
+                            <h3 class="pub-card-title">
+                                1.
+                                <a
+                                    href="https://www.nature.com/articles/s41586-026-10447-1"
+                                    onclick="event.stopPropagation()"
+                                    >Systematic partisan content skews in TikTok
+                                    during the 2024 U.S. elections</a
+                                >
+                            </h3>
+                            <p class="pub-card-authors-preview">
+                                Hazem Ibrahim, Jang, H. D., et al.
+                            </p>
+                            <p class="journal">
+                                <strong>Nature</strong> (2026)
+                            </p>
+                        </div>
+                        <svg
+                            class="pub-card-chevron"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                        >
+                            <path
+                                d="M5 7.5L10 12.5L15 7.5"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
                         </svg>
-                        <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </div>
+                    <div class="pub-card-body">
+                        <div class="pub-card-body-inner">
+                            <div class="pub-card-thumbnail">
+                                <a
+                                    href="https://www.nature.com/articles/s41586-026-10447-1"
+                                    target="_blank"
+                                    onclick="event.stopPropagation()"
+                                    ><img
+                                        src="assets/paper1_tiktok.png"
+                                        alt="First page of paper"
+                                /></a>
+                            </div>
+                            <div class="pub-card-details">
+                                <div class="pub-card-expanded-header">
+                                    <h3 class="pub-card-title">
+                                        1.
+                                        <a
+                                            href="https://www.nature.com/articles/s41586-026-10447-1"
+                                            onclick="event.stopPropagation()"
+                                            >Systematic partisan content skews
+                                            in TikTok during the 2024 U.S.
+                                            elections</a
+                                        >
+                                    </h3>
+                                    <p class="journal">
+                                        <strong>Nature</strong> (2026)
+                                    </p>
+                                </div>
+                                <div class="pub-card-detail-block">
+                                    <h4>Authors</h4>
+                                    <p>
+                                        <strong>Hazem Ibrahim</strong>, Jang, H.
+                                        D., AlDahoul, N., Kaufman, A. R.,
+                                        Rahwan, T., and Zaki, Y.
+                                    </p>
+                                </div>
+                                <div class="pub-card-detail-block">
+                                    <h4>Summary</h4>
+                                    <p class="pub-card-abstract">
+                                        Using 323 bot-driven audits over six
+                                        months, this study reveals systematic
+                                        partisan content skews in TikTok's
+                                        recommendation algorithm during the 2024
+                                        U.S. presidential race. The platform
+                                        exhibited measurable political bias in
+                                        the content it surfaced to users.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" onclick="toggleCard(this)">
+                    <div class="pub-card-header">
+                        <div class="pub-card-header-content">
+                            <h3 class="pub-card-title">
+                                2.
+                                <a
+                                    href="https://arxiv.org/pdf/2412.02712"
+                                    onclick="event.stopPropagation()"
+                                    >Analyzing political stances on Twitter/X in
+                                    the lead-up to the 2024 U.S. election</a
+                                >
+                            </h3>
+                            <p class="pub-card-authors-preview">
+                                Hazem Ibrahim, Khan, F., et al.
+                            </p>
+                            <p class="journal">
+                                <strong>PoliticalNLP Workshop at EACL</strong>
+                                (2026)
+                            </p>
+                        </div>
+                        <svg
+                            class="pub-card-chevron"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                        >
+                            <path
+                                d="M5 7.5L10 12.5L15 7.5"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
                         </svg>
-                    </button>
+                    </div>
+                    <div class="pub-card-body">
+                        <div class="pub-card-body-inner">
+                            <div class="pub-card-thumbnail">
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    onclick="event.stopPropagation()"
+                                    ><img
+                                        src="assets/paper2_twitter.png"
+                                        alt="First page of paper"
+                                /></a>
+                            </div>
+                            <div class="pub-card-details">
+                                <div class="pub-card-expanded-header">
+                                    <h3 class="pub-card-title">
+                                        2.
+                                        <a
+                                            href="https://arxiv.org/pdf/2412.02712"
+                                            onclick="event.stopPropagation()"
+                                            >Analyzing political stances on
+                                            Twitter/X in the lead-up to the 2024
+                                            U.S. election</a
+                                        >
+                                    </h3>
+                                    <p class="journal">
+                                        <strong
+                                            >PoliticalNLP Workshop at
+                                            EACL</strong
+                                        >
+                                        (2026)
+                                    </p>
+                                </div>
+                                <div class="pub-card-detail-block">
+                                    <h4>Authors</h4>
+                                    <p>
+                                        <strong>Hazem Ibrahim</strong>, Khan,
+                                        F., T., Rahwan, T., and Zaki, Y.
+                                    </p>
+                                </div>
+                                <div class="pub-card-detail-block">
+                                    <h4>Summary</h4>
+                                    <p class="pub-card-abstract">
+                                        This study analyzes 1,235 tweets from
+                                        major U.S. political figures and 63,322
+                                        replies during the 2024 election using
+                                        an LLM-based classification pipeline.
+                                        Republican candidates authored
+                                        significantly more criticism of the
+                                        Democratic party than vice versa, while
+                                        Republican-aligned users dominated reply
+                                        activity across both parties' tweets.
+                                        Key political events triggered
+                                        measurable shifts in the ideological
+                                        positioning of public discourse.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="bio">
-                <p>I'm a PhD candidate in Computer Science at NYU, where I study how algorithms, data, and institutions create systematic inequalities in who is seen, heard, and valued. My work treats bias in socio-technical systems&mdash;social-media platforms, large language models, academic publishing&mdash;not as a bug in a single model but as an emergent property of tightly coupled computational and social processes.
-                    <br><br>
-                    My research is organized around three mechanisms: <strong>visibility bias</strong> (who sees what information), <strong>representational bias</strong> (how groups are portrayed), and <strong>institutional bias</strong> (how credit, access, and evaluation are allocated). I study these through an end-to-end approach that moves from measurement&mdash;building large-scale datasets and quantifying inequalities&mdash;to causation&mdash;designing field experiments and algorithmic audits that isolate how platform rules and human decisions jointly produce bias&mdash;to mitigation&mdash;proposing algorithmic and policy interventions. This work spans two empirical domains: social media and LLMs (auditing recommendation algorithms on YouTube and TikTok, measuring the political behavior of LLMs) and academia and bibliographic systems (uncovering citation manipulation and demonstrating racial and institutional biases in access to scientific knowledge).
-                    <br><br>
-                    My findings have been published in Nature, PNAS Nexus, Scientific Reports, and IEEE, and covered by outlets including Nature, Science, Scientific American, and The Times. I was named to MIT Technology Review's Innovators Under 35 list in 2023. Prior to my PhD, I earned an M.Sc. from the University of Toronto and a B.Sc. from NYU Abu Dhabi.</p>
-            </div>
-        </header>
 
-        <section class="publications">
-            <h2>Publications</h2>
-            <h3> <br> Published</h3>
-
-            <div class="publication">
-                <h3>1. <a href="https://arxiv.org/abs/2501.17831">Systematic partisan content skews in TikTok during the 2024 U.S. elections</a></h3>
-                <p class="authors"><strong>Hazem Ibrahim</strong>, Jang, H. D., AlDahoul, N., Kaufman, A. R., Rahwan, T., and Zaki, Y.</p>
-                <p class="journal">Forthcoming in <strong>Nature</strong> (2026)</p>
-            </div>
-
-            <div class="publication">
-                <h3>2. <a href="#">Analyzing political stances on Twitter/X in the lead-up to the 2024 U.S. election</a></h3>
-                <p class="authors"><strong>Hazem Ibrahim</strong>, Khan, F., T., Rahwan, T., and Zaki, Y.</p>
-                <p class="journal"><strong>PoliticalNLP Workshop at EACL</strong> (2026)</p>
-            </div>
-
-            <div class="publication">
-                <h3>3. <a href="https://www.nature.com/articles/s41598-025-88709-7">Citation manipulation through citation mills and pre-print servers</a></h3>
-                <p class="authors"><strong>Hazem Ibrahim</strong>, Liu, F., Zaki, Y., and Rahwan, T.</p>
-                <p class="journal"><strong>Scientific Reports</strong> 15, 5480 (2025)</p>
-            </div>
-
-            <div class="publication">
-                <h3>4. <a href="https://ixdea.org/65_6/">Heritage Language Maintenance: The Case of Bangladeshi Immigrants in Canada</a></h3>
-                <p class="authors"><strong>Hazem Ibrahim</strong>, Sabie, D., Roy, P., Bhattacharjee, A., Alam, S. M. R., Mim, N. J., and Ahmed, S. I.</p>
-                <p class="journal"><strong>Interaction Design and Architecture(s) Journal (IxD&amp;A)</strong> (2025)</p>
-            </div>
-
-            <div class="publication">
-                <h3>5. <a href="https://ieeexplore.ieee.org/abstract/document/10379489/">Big tech dominance despite global mistrust</a></h3>
-                <p class="authors"><strong>Hazem Ibrahim</strong>, Debicki, M., Rahwan, T., and Zaki, Y.</p>
-                <p class="journal"><strong>IEEE Transactions on Computational Social Systems</strong> 11, 3741&ndash;3752 (2024)</p>
-            </div>
-
-            <div class="publication">
-                <h3>6. <a href="https://academic.oup.com/pnasnexus/article-abstract/2/8/pgad264/7242446">YouTube's recommendation algorithm is left-leaning in the United States</a></h3>
-                <p class="authors"><strong>Hazem Ibrahim</strong>, AlDahoul, N., Lee, S., Rahwan, T., and Zaki, Y.</p>
-                <p class="journal"><strong>PNAS Nexus</strong> 2, pgad264 (2023)</p>
-            </div>
-
-            <div class="publication">
-                <h3>7. <a href="https://ieeexplore.ieee.org/abstract/document/10111520/">Rethinking homework in the age of artificial intelligence</a></h3>
-                <p class="authors"><strong>Hazem Ibrahim</strong>, Asim, R., Zaffar, F., Rahwan, T., and Zaki, Y.</p>
-                <p class="journal"><strong>IEEE Intelligent Systems</strong> 38, 24&ndash;27 (2023)</p>
-            </div>
-
-            <div class="publication">
-                <h3>8. <a href="https://www.nature.com/articles/s41598-023-38964-3">Perception, performance, and detectability of conversational artificial intelligence across 32 university courses</a></h3>
-                <p class="authors"><strong>Hazem Ibrahim</strong>, Liu, F., Asim, R., Battu, B., Benabderrahmane, S., Alhafni, B., Adnan, W., Alhanai, T., AlShebli, B., Baghdadi, R., <em>et al.</em></p>
-                <p class="journal"><strong>Scientific Reports</strong> 13, 12187 (2023)</p>
-            </div>
-
-            <div class="publication">
-                <h3>9. <a href="https://dl.acm.org/doi/abs/10.1145/3618257.3624834">I tag, you tag, everybody tags!</a></h3>
-                <p class="authors"><strong>Hazem Ibrahim</strong>, Asim, R., Varvello, M., and Zaki, Y.</p>
-                <p class="journal"><strong>ACM IMC</strong> (2023)</p>
-            </div>
-
-            <div class="publication">
-                <h3>10. <a href="#">Gamification in online educational systems</a></h3>
-                <p class="authors"><strong>Hazem Ibrahim</strong> and Ibrahim, W.</p>
-                <p class="journal"><strong>6th International Conference on Higher Education Advances (HEAd'20)</strong> (2020)</p>
-            </div>
-
-            <div class="publication">
-                <h3>11. <a href="https://ieeexplore.ieee.org/abstract/document/8536491/">Multithreaded and reconvergent aware algorithms for accurate digital circuits reliability estimation</a></h3>
-                <p class="authors">Ibrahim, W., and <strong>Hazem Ibrahim</strong></p>
-                <p class="journal"><strong>IEEE Transactions on Reliability</strong> 68, 514&ndash;525 (2018)</p>
-            </div>
-        </section>
-
-        <section class="publications">
-            <h3> <br> Under Review</h3>
-
-            <div class="publication">
-                <h3>12. <a href="https://arxiv.org/abs/2509.08299">Causal evidence of racial and institutional biases in accessing paywalled articles and scientific data</a></h3>
-                <p class="authors"><strong>Hazem Ibrahim</strong>, Liu, F., Mengal, K., Kaufman, A., Zaki, Y., and Rahwan, T.</p>
-                <p class="journal">Revise and Resubmit at <strong>Science</strong></p>
-            </div>
-
-            <div class="publication">
-                <h3>13. <a href="https://arxiv.org/abs/2505.04171">Large language models are often politically extreme, usually ideologically inconsistent, and persuasive even in informational contexts</a></h3>
-                <p class="authors">AlDahoul, N., <strong>Hazem Ibrahim</strong>, Kaufman, A., Rahwan, T., and Zaki, Y.</p>
-                <p class="journal">Revise and Resubmit at <strong>American Political Science Review</strong></p>
-            </div>
-
-            <div class="publication">
-                <h3>14. <a href="https://arxiv.org/abs/2405.06404">Inclusive content reduces racial and gender biases, yet non-inclusive content dominates popular media outlets</a></h3>
-                <p class="authors">AlDahoul, N., <strong>Hazem Ibrahim</strong>, Park, M., Rahwan, T., and Zaki, Y.</p>
-                <p class="journal">Under review at <strong>Nature Computational Science</strong></p>
-            </div>
-
-            <div class="publication">
-                <h3>15. <a href="https://arxiv.org/abs/2509.08306">Who Gets Seen in the Age of AI? Adoption Patterns of Large Language Models in Scholarly Writing and Citation Outcomes</a></h3>
-                <p class="authors">Farhan, K., <strong>Hazem Ibrahim</strong>, Rahwan, T., and Zaki, Y.</p>
-                <p class="journal">Under review at <strong>Journal of Informetrics</strong></p>
-            </div>
-
-            <div class="publication">
-                <h3>16. A longitudinal analysis of racial and gender bias in New York Times and Fox News images and articles</h3>
-                <p class="authors"><strong>Hazem Ibrahim</strong>, AlDahoul, N., Abbasi, S. M. A., Zaffar, F., Rahwan, T., and Zaki, Y.</p>
-                <p class="journal">Revise and Resubmit at <strong>ICWSM 2026</strong></p>
-            </div>
-
-            <div class="publication">
-                <h3>17. Neutralizing the Narrative: AI-Powered Debiasing of Online News Articles</h3>
-                <p class="authors">Kuo, C. W., Chu, K., AlDahoul, N., <strong>Hazem Ibrahim</strong>, Rahwan, T., and Zaki, Y.</p>
-                <p class="journal">Under review at <strong>Engineering Applications of Artificial Intelligence</strong></p>
-            </div>
-
-            <div class="publication">
-                <h3>18. <a href="https://arxiv.org/abs/2501.17452">A Tale of Three Location Trackers: AirTag, SmartTag, and Tile</a></h3>
-                <p class="authors">Jang, H. D., <strong>Hazem Ibrahim</strong>, Asim, R., Rahwan, T., and Zaki, Y.</p>
-                <p class="journal">Under review at <strong>IMC 2026</strong></p>
-            </div>
-        </section>
-
-        <section class="works-in-progress">
-            <h3><br>In Preparation</h3>
-
-            <div class="publication">
-                <h3>19. Structural inequalities in Hollywood representation across a century of film</h3>
-                <p class="authors"><strong>Hazem Ibrahim</strong>, AlDahoul, N., Rahwan, T., Zaki, Y., and Park, M.</p>
-                <p class="journal"><strong>In preparation</strong></p>
-            </div>
-
-            <div class="publication">
-                <h3>20. Two-thirds of citations to review papers belong to original research</h3>
-                <p class="authors"><strong>Hazem Ibrahim</strong>, Liu, F., Zaki, Y., and Rahwan, T.</p>
-                <p class="journal"><strong>In preparation</strong></p>
-            </div>
-
-            <div class="publication">
-                <h3>21. Measuring the Political Ideology of LLMs Across 90 Countries</h3>
-                <p class="authors">Omari, A., <strong>Hazem Ibrahim</strong>, AlDahoul, N., Zaki, Y., Rahwan, T., and Kaufman, A.</p>
-                <p class="journal"><strong>In preparation</strong></p>
-            </div>
-
-            <div class="publication">
-                <h3>22. Examining propaganda on Telegram during the Russia/Ukraine War</h3>
-                <p class="authors"><strong>Hazem Ibrahim</strong>, Holovatska, Y., AlDahoul, N., Zaki, Y., and Rahwan, T.</p>
-                <p class="journal"><strong>In preparation</strong></p>
-            </div>
-        </section>
-
-        <section class="teaching-service">
-            <h2>Teaching Experience &amp; Service</h2>
-
-            <h3>Teaching and Guest Lectures</h3>
-            <ul>
-                <li><em>Guest Lecturer</em>, CS-UH 2219E &ndash; <strong>Computational Social Science</strong> &ndash; NYU Abu Dhabi (Spring 2026)</li>
-                <li><em>Instructor</em>, CS-UH 1001 &ndash; <strong>Introduction to Computer Science</strong> &ndash; NYU Abu Dhabi (Fall 2020, Summer 2021, Fall 2021)</li>
-                <li><em>Instructor</em>, CS-UH 1002 &ndash; <strong>Discrete Mathematics</strong> &ndash; NYU Abu Dhabi (Fall 2021, Spring 2022, Summer 2022)</li>
-                <li><em>Instructor</em>, CS-UH 1050 &ndash; <strong>Data Structures</strong> &ndash; NYU Abu Dhabi (Spring 2021, Fall 2021)</li>
-                <li><em>Instructor</em>, CS-UH 2214 &ndash; <strong>Database Systems</strong> &ndash; NYU Abu Dhabi (Fall 2021, Spring 2022)</li>
-                <li><em>Instructor</em>, CS-UH 2220 &ndash; <strong>Machine Learning</strong> &ndash; NYU Abu Dhabi (Spring 2022)</li>
-                <li><em>Instructor</em>, CS-UH 2219E &ndash; <strong>Computational Social Science</strong> &ndash; NYU Abu Dhabi (Spring 2021, Fall 2021)</li>
-                <li><em>Teaching Assistant</em>, CSC148H &ndash; <strong>Introduction to Computer Science</strong> &ndash; University of Toronto (Spring 2018, Fall 2018, Fall 2019)</li>
-            </ul>
-
-            <h3>Academic Advising</h3>
-            <ul>
-                <li>Undergraduate Thesis Advisor &ndash; Tewoflos Girmay, Yana Holovatska (NYU Abu Dhabi, 2026)</li>
-                <li>Undergraduate Thesis Advisor &ndash; Farhan Kamrul Khan, Chen Wei Kuo, and Kevin Chu (NYU Abu Dhabi, 2025)</li>
-            </ul>
-
-            <h3>Service</h3>
-            <ul>
-                <li><strong>Reviewer</strong>: PNAS Nexus, AAAI ICWSM, IC2S2, ACM WebConf (WWW), ACM CHI, ACM CSCW, and Scientometrics</li>
-            </ul>
-        </section>
-
-        <section class="media-coverage">
-            <h2>Media Coverage and Awards</h2>
-
-            <div class="media-item">
-                <h3><strong>Best Poster Award at AI4GS 2025</strong></h3>
-                <p>I was awarded the Best Poster Award for my poster on investigating racial and institutional biases in accessing paywalled articles and scientific data.</p>
-                <div class="media-images" align="center">
-                    <img src="assets/ai4gs_award.png" alt="AI4GS Poster" class="media-img" loading="lazy" style="width: 70%; height: auto;">
+                <div class="pub-card" onclick="toggleCard(this)">
+                    <div class="pub-card-header">
+                        <div class="pub-card-header-content">
+                            <h3 class="pub-card-title">
+                                3.
+                                <a
+                                    href="https://www.nature.com/articles/s41598-025-88709-7"
+                                    onclick="event.stopPropagation()"
+                                    >Citation manipulation through citation
+                                    mills and pre-print servers</a
+                                >
+                            </h3>
+                            <p class="pub-card-authors-preview">
+                                Hazem Ibrahim, Liu, F., et al.
+                            </p>
+                            <p class="journal">
+                                <strong>Scientific Reports</strong>
+                                (2025)
+                            </p>
+                        </div>
+                        <svg
+                            class="pub-card-chevron"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                        >
+                            <path
+                                d="M5 7.5L10 12.5L15 7.5"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+                    <div class="pub-card-body">
+                        <div class="pub-card-body-inner">
+                            <div class="pub-card-thumbnail">
+                                <a
+                                    href="https://www.nature.com/articles/s41598-025-88709-7"
+                                    target="_blank"
+                                    onclick="event.stopPropagation()"
+                                    ><img
+                                        src="assets/paper3_citation.png"
+                                        alt="First page of paper"
+                                /></a>
+                            </div>
+                            <div class="pub-card-details">
+                                <div class="pub-card-expanded-header">
+                                    <h3 class="pub-card-title">
+                                        3.
+                                        <a
+                                            href="https://www.nature.com/articles/s41598-025-88709-7"
+                                            onclick="event.stopPropagation()"
+                                            >Citation manipulation through
+                                            citation mills and pre-print
+                                            servers</a
+                                        >
+                                    </h3>
+                                    <p class="journal">
+                                        <strong>Scientific Reports</strong>
+                                        (2025)
+                                    </p>
+                                </div>
+                                <div class="pub-card-detail-block">
+                                    <h4>Authors</h4>
+                                    <p>
+                                        <strong>Hazem Ibrahim</strong>, Liu, F.,
+                                        Zaki, Y., and Rahwan, T.
+                                    </p>
+                                </div>
+                                <div class="pub-card-detail-block">
+                                    <h4>Summary</h4>
+                                    <p class="pub-card-abstract">
+                                        Through an undercover sting operation,
+                                        this study provides conclusive evidence
+                                        that academic citations can be purchased
+                                        in bulk through citation boosting
+                                        services. The bought citations appeared
+                                        in a Scopus-indexed journal, revealing a
+                                        systematic vulnerability in scholarly
+                                        publishing integrity. The findings were
+                                        covered by Nature and Science.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="media-item">
-                <h3><strong>ChatGPT and Homework</strong></h3>
-                <p>Our paper "Perception, Performance, and Detectability of Conversational Artificial Intelligence Across 32 University Courses" evaluated ChatGPT's ability to solve homework assignment. It was covered by news outlets worldwide: Scientific American, The Times, The Independent, Nature Asia, Government Tech, Daily Mail, The Daily Beast, New Scientist, EurekAlert!, Phys.org, The National, Neuroscience News, Nature Middle East.</p>
-                <div class="media-images">
-                    <a href="https://www.thetimes.co.uk/article/ai-detectors-fail-when-texts-are-run-through-online-grammar-tool-xh5cqtxgp"><img src="assets/gpt_1.avif" alt="gpt_1" class="media-img" loading="lazy"></a>
-                    <a href="https://www.scientificamerican.com/article/chatgpt-can-get-good-grades-what-should-educators-do-about-it/"><img src="assets/gpt_2.avif" alt="gpt_2" class="media-img" loading="lazy"></a>
-                    <a href="https://www.newscientist.com/article/2388789-chatgpt-gets-better-marks-than-students-in-some-university-courses/"><img src="assets/gpt_3.avif" alt="gpt_3" class="media-img" loading="lazy"></a>
-                    <a href="https://www.independent.co.uk/news/uk/politics/chatgpt-research-department-for-education-b2398826.html"><img src="assets/gpt_4.png" alt="gpt_4" class="media-img" loading="lazy"></a>
-                    <a href="https://www.natureasia.com/ar/nmiddleeast/article/10.1038/nmiddleeast.2023.154"><img src="assets/gpt_5.png" alt="gpt_5" class="media-img" loading="lazy"></a>
-                    <a href="https://www.natureasia.com/ja-jp/research/highlight/14624"><img src="assets/gpt_6.png" alt="gpt_6" class="media-img" loading="lazy"></a>
+                <div class="pub-card" onclick="toggleCard(this)">
+                    <div class="pub-card-header">
+                        <div class="pub-card-header-content">
+                            <h3 class="pub-card-title">
+                                4.
+                                <a
+                                    href="https://ixdea.org/65_6/"
+                                    onclick="event.stopPropagation()"
+                                    >Heritage Language Maintenance: The Case of
+                                    Bangladeshi Immigrants in Canada</a
+                                >
+                            </h3>
+                            <p class="pub-card-authors-preview">
+                                Hazem Ibrahim, Sabie, D., et al.
+                            </p>
+                            <p class="journal">
+                                <strong
+                                    >Interaction Design and Architecture(s)
+                                    Journal (IxD&amp;A)</strong
+                                >
+                                (2025)
+                            </p>
+                        </div>
+                        <svg
+                            class="pub-card-chevron"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                        >
+                            <path
+                                d="M5 7.5L10 12.5L15 7.5"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+                    <div class="pub-card-body">
+                        <div class="pub-card-body-inner">
+                            <div class="pub-card-thumbnail">
+                                <a
+                                    href="https://ixdea.org/65_6/"
+                                    target="_blank"
+                                    onclick="event.stopPropagation()"
+                                    ><img
+                                        src="assets/paper4_heritage.png"
+                                        alt="First page of paper"
+                                /></a>
+                            </div>
+                            <div class="pub-card-details">
+                                <div class="pub-card-expanded-header">
+                                    <h3 class="pub-card-title">
+                                        4.
+                                        <a
+                                            href="https://ixdea.org/65_6/"
+                                            onclick="event.stopPropagation()"
+                                            >Heritage Language Maintenance: The
+                                            Case of Bangladeshi Immigrants in
+                                            Canada</a
+                                        >
+                                    </h3>
+                                    <p class="journal">
+                                        <strong
+                                            >Interaction Design and
+                                            Architecture(s) Journal
+                                            (IxD&amp;A)</strong
+                                        >
+                                        (2025)
+                                    </p>
+                                </div>
+                                <div class="pub-card-detail-block">
+                                    <h4>Authors</h4>
+                                    <p>
+                                        <strong>Hazem Ibrahim</strong>, Sabie,
+                                        D., Roy, P., Bhattacharjee, A., Alam, S.
+                                        M. R., Mim, N. J., and Ahmed, S. I.
+                                    </p>
+                                </div>
+                                <div class="pub-card-detail-block">
+                                    <h4>Summary</h4>
+                                    <p class="pub-card-abstract">
+                                        This study interviews 20 Bangladeshi
+                                        immigrant parents in Canada to explore
+                                        the challenges they face in maintaining
+                                        their children's heritage language,
+                                        Bangla. The findings reveal cultural
+                                        tensions, economic constraints, and
+                                        infrastructural barriers to heritage
+                                        language learning. Design implications
+                                        are proposed for technologies supporting
+                                        heritage language maintenance in
+                                        immigrant communities.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="media-item">
-                <h3><strong>Systematic partisan content skews in TikTok during the 2024 U.S. elections</strong></h3>
-                <p>Using 323 independent bot-driven audits, we tracked changes in TikTok's recommendation algorithm in the six months prior to the 2024 US presidential race. Our findings were covered by PsyPost, Der Standard, and NextShark.</p>
-                <div class="media-images" align="center">
-                    <a href="https://www.psypost.org/tiktoks-algorithm-exhibited-pro-republican-bias-during-2024-presidential-race-study-finds/"><img src="assets/tiktok_1.png" alt="tiktok_1" class="media-img" loading="lazy"></a>
-                    <a href="https://www.derstandard.at/story/3000000256046/wie-tiktok-im-us-wahlkampf-die-republikaner-unterstuetzt-haben-soll"><img src="assets/tiktok_2.png" alt="tiktok_2" class="media-img" loading="lazy"></a>
-                    <a href="https://www.yahoo.com/news/tiktok-algorithm-shows-bias-political-154014827.html?guccounter=1"><img src="assets/tiktok_3.png" alt="tiktok_3" class="media-img" loading="lazy"></a>
+                <div class="pub-card" onclick="toggleCard(this)">
+                    <div class="pub-card-header">
+                        <div class="pub-card-header-content">
+                            <h3 class="pub-card-title">
+                                5.
+                                <a
+                                    href="https://ieeexplore.ieee.org/abstract/document/10379489/"
+                                    onclick="event.stopPropagation()"
+                                    >Big tech dominance despite global
+                                    mistrust</a
+                                >
+                            </h3>
+                            <p class="pub-card-authors-preview">
+                                Hazem Ibrahim, Debicki, M., et al.
+                            </p>
+                            <p class="journal">
+                                <strong
+                                    >IEEE Transactions on Computational Social
+                                    Systems</strong
+                                >
+                                (2024)
+                            </p>
+                        </div>
+                        <svg
+                            class="pub-card-chevron"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                        >
+                            <path
+                                d="M5 7.5L10 12.5L15 7.5"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+                    <div class="pub-card-body">
+                        <div class="pub-card-body-inner">
+                            <div class="pub-card-thumbnail">
+                                <a
+                                    href="https://ieeexplore.ieee.org/abstract/document/10379489/"
+                                    target="_blank"
+                                    onclick="event.stopPropagation()"
+                                    ><img
+                                        src="assets/paper5_bigtech.png"
+                                        alt="First page of paper"
+                                /></a>
+                            </div>
+                            <div class="pub-card-details">
+                                <div class="pub-card-expanded-header">
+                                    <h3 class="pub-card-title">
+                                        5.
+                                        <a
+                                            href="https://ieeexplore.ieee.org/abstract/document/10379489/"
+                                            onclick="event.stopPropagation()"
+                                            >Big tech dominance despite global
+                                            mistrust</a
+                                        >
+                                    </h3>
+                                    <p class="journal">
+                                        <strong
+                                            >IEEE Transactions on Computational
+                                            Social Systems</strong
+                                        >
+                                        (2024)
+                                    </p>
+                                </div>
+                                <div class="pub-card-detail-block">
+                                    <h4>Authors</h4>
+                                    <p>
+                                        <strong>Hazem Ibrahim</strong>, Debicki,
+                                        M., Rahwan, T., and Zaki, Y.
+                                    </p>
+                                </div>
+                                <div class="pub-card-detail-block">
+                                    <h4>Summary</h4>
+                                    <p class="pub-card-abstract">
+                                        This study examines global attitudes
+                                        toward major technology companies,
+                                        finding that despite widespread
+                                        mistrust, big tech firms maintain market
+                                        dominance. The research spans multiple
+                                        countries and analyzes the disconnect
+                                        between public sentiment and continued
+                                        user dependence on these platforms.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="media-item">
-                <h3><strong>Citation manipulation</strong></h3>
-                <p>We went under cover, contacted a "citation boosting service", and managed to buy citations that appeared in a Scopus-Indexed journal. Our sting operation provided conclusive evidence that citations can be bought in bulk. The findings were covered by Nature and Science.</p>
-                <div class="media-images" align="center">
-                    <a href="https://www.science.org/content/article/vendor-offering-citations-purchase-latest-bad-actor-scholarly-publishing"><img src="assets/scholar_1.avif" alt="scholar_1" class="media-img" loading="lazy"></a>
-                    <a href="https://www.nature.com/articles/d41586-024-01672-7"><img src="assets/scholar_2.avif" alt="scholar_2" class="media-img" loading="lazy"></a>
-                    <a href="https://www.science.org/content/article/how-easy-it-fudge-your-scientific-rank-meet-larry-world-s-most-cited-cat"><img src="assets/scholar_3.avif" alt="scholar_3" class="media-img" loading="lazy"></a>
+                <div class="pub-card" onclick="toggleCard(this)">
+                    <div class="pub-card-header">
+                        <div class="pub-card-header-content">
+                            <h3 class="pub-card-title">
+                                6.
+                                <a
+                                    href="https://academic.oup.com/pnasnexus/article-abstract/2/8/pgad264/7242446"
+                                    onclick="event.stopPropagation()"
+                                    >YouTube's recommendation algorithm is
+                                    left-leaning in the United States</a
+                                >
+                            </h3>
+                            <p class="pub-card-authors-preview">
+                                Hazem Ibrahim, AlDahoul, N., et al.
+                            </p>
+                            <p class="journal">
+                                <strong>PNAS Nexus</strong> (2023)
+                            </p>
+                        </div>
+                        <svg
+                            class="pub-card-chevron"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                        >
+                            <path
+                                d="M5 7.5L10 12.5L15 7.5"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+                    <div class="pub-card-body">
+                        <div class="pub-card-body-inner">
+                            <div class="pub-card-thumbnail">
+                                <a
+                                    href="https://academic.oup.com/pnasnexus/article-abstract/2/8/pgad264/7242446"
+                                    target="_blank"
+                                    onclick="event.stopPropagation()"
+                                    ><img
+                                        src="assets/paper6_youtube.png"
+                                        alt="First page of paper"
+                                /></a>
+                            </div>
+                            <div class="pub-card-details">
+                                <div class="pub-card-expanded-header">
+                                    <h3 class="pub-card-title">
+                                        6.
+                                        <a
+                                            href="https://academic.oup.com/pnasnexus/article-abstract/2/8/pgad264/7242446"
+                                            onclick="event.stopPropagation()"
+                                            >YouTube's recommendation algorithm
+                                            is left-leaning in the United
+                                            States</a
+                                        >
+                                    </h3>
+                                    <p class="journal">
+                                        <strong>PNAS Nexus</strong> (2023)
+                                    </p>
+                                </div>
+                                <div class="pub-card-detail-block">
+                                    <h4>Authors</h4>
+                                    <p>
+                                        <strong>Hazem Ibrahim</strong>,
+                                        AlDahoul, N., Lee, S., Rahwan, T., and
+                                        Zaki, Y.
+                                    </p>
+                                </div>
+                                <div class="pub-card-detail-block">
+                                    <h4>Summary</h4>
+                                    <p class="pub-card-abstract">
+                                        Through a large-scale algorithmic audit,
+                                        this study reveals that YouTube's
+                                        recommendation algorithm exhibits a
+                                        left-leaning political bias in the
+                                        United States. The findings challenge
+                                        prior assumptions about the platform's
+                                        role in political radicalization and
+                                        contributed to public debate about
+                                        algorithmic neutrality.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="media-item">
-                <h3><strong>YouTube's recommendation algorithm is left-leaning in the United States</strong></h3>
-                <p>Our paper "YouTube's recommendation algorithm is left-leaning in the United States" revealed a political bias in YouTube's algorithm. The paper was published in PNAS Nexus, and received media coverage from Daily Caller, American Council on Science and Health, The College Fix, PsyPost.</p>
-                <div class="media-images" align="center">
-                    <a href="https://www.psypost.org/2023/09/youtubes-recommendation-system-exhibits-left-leaning-bias-new-study-suggests-195536"><img src="assets/youtube_1.avif" alt="youtube_1" class="media-img" loading="lazy"></a>
-                    <a href="https://www.acsh.org/news/2023/08/28/counter-intuitive-bias-youtube%E2%80%99s-algorithm-17291"><img src="assets/youtube_2.avif" alt="youtube_2" class="media-img" loading="lazy"></a>
-                    <a href="https://dailycaller.com/2023/08/22/youtube-algorithm-has-a-left-wing-bias-researchers-find/"><img src="assets/youtube_3.avif" alt="youtube_3" class="media-img" loading="lazy"></a>
+                <div class="pub-card" onclick="toggleCard(this)">
+                    <div class="pub-card-header">
+                        <div class="pub-card-header-content">
+                            <h3 class="pub-card-title">
+                                7.
+                                <a
+                                    href="https://ieeexplore.ieee.org/abstract/document/10111520/"
+                                    onclick="event.stopPropagation()"
+                                    >Rethinking homework in the age of
+                                    artificial intelligence</a
+                                >
+                            </h3>
+                            <p class="pub-card-authors-preview">
+                                Hazem Ibrahim, Asim, R., et al.
+                            </p>
+                            <p class="journal">
+                                <strong>IEEE Intelligent Systems</strong> (2023)
+                            </p>
+                        </div>
+                        <svg
+                            class="pub-card-chevron"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                        >
+                            <path
+                                d="M5 7.5L10 12.5L15 7.5"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+                    <div class="pub-card-body">
+                        <div class="pub-card-body-inner">
+                            <div class="pub-card-thumbnail">
+                                <a
+                                    href="https://ieeexplore.ieee.org/abstract/document/10111520/"
+                                    target="_blank"
+                                    onclick="event.stopPropagation()"
+                                    ><img
+                                        src="assets/paper7_homework.png"
+                                        alt="First page of paper"
+                                /></a>
+                            </div>
+                            <div class="pub-card-details">
+                                <div class="pub-card-expanded-header">
+                                    <h3 class="pub-card-title">
+                                        7.
+                                        <a
+                                            href="https://ieeexplore.ieee.org/abstract/document/10111520/"
+                                            onclick="event.stopPropagation()"
+                                            >Rethinking homework in the age of
+                                            artificial intelligence</a
+                                        >
+                                    </h3>
+                                    <p class="journal">
+                                        <strong
+                                            >IEEE Intelligent Systems</strong
+                                        >
+                                        (2023)
+                                    </p>
+                                </div>
+                                <div class="pub-card-detail-block">
+                                    <h4>Authors</h4>
+                                    <p>
+                                        <strong>Hazem Ibrahim</strong>, Asim,
+                                        R., Zaffar, F., Rahwan, T., and Zaki, Y.
+                                    </p>
+                                </div>
+                                <div class="pub-card-detail-block">
+                                    <h4>Summary</h4>
+                                    <p class="pub-card-abstract">
+                                        This paper examines the implications of
+                                        conversational AI systems like ChatGPT
+                                        for university homework assignments. It
+                                        argues that traditional homework
+                                        paradigms need rethinking given AI's
+                                        growing capabilities and proposes
+                                        alternative assessment approaches for
+                                        the age of generative AI.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="media-item">
-                <h3><strong>MIT Innovator Under 35 Award</strong></h3>
-                <p>I was awarded the MIT Innovator Under 35 Award in 2023 for my work on large language models and its impact on university education.</p>
-                <div class="media-images" align="center">
-                    <a href="https://majarra.com/en/about/news/%D8%A5%D8%B9%D9%84%D8%A7%D9%86-%D9%82%D8%A7%D8%A6%D9%85%D8%A9-%D8%A7%D9%84%D9%81%D8%A7%D8%A6%D8%B2%D9%8A%D9%86-%D8%A8%D8%AC%D8%A7%D8%A6%D8%B2%D8%A9-%22%D9%85%D8%A8%D8%AA%D9%83%D8%B1%D9%88%D9%86-%D8%AF%D9%88%D9%86-35%22-%D9%84%D8%B9%D8%A7%D9%85-2023?from=home_page"><img src="assets/mit_media_award.png" alt="MIT Innovator Under 35 Award" class="media-img-large media-img" loading="lazy"></a>
+                <div class="pub-card" onclick="toggleCard(this)">
+                    <div class="pub-card-header">
+                        <div class="pub-card-header-content">
+                            <h3 class="pub-card-title">
+                                8.
+                                <a
+                                    href="https://www.nature.com/articles/s41598-023-38964-3"
+                                    onclick="event.stopPropagation()"
+                                    >Perception, performance, and detectability
+                                    of conversational artificial intelligence
+                                    across 32 university courses</a
+                                >
+                            </h3>
+                            <p class="pub-card-authors-preview">
+                                Hazem Ibrahim, Liu, F., et al.
+                            </p>
+                            <p class="journal">
+                                <strong>Scientific Reports</strong> 13, 12187
+                                (2023)
+                            </p>
+                        </div>
+                        <svg
+                            class="pub-card-chevron"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                        >
+                            <path
+                                d="M5 7.5L10 12.5L15 7.5"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+                    <div class="pub-card-body">
+                        <div class="pub-card-body-inner">
+                            <div class="pub-card-thumbnail">
+                                <a
+                                    href="https://www.nature.com/articles/s41598-023-38964-3"
+                                    target="_blank"
+                                    onclick="event.stopPropagation()"
+                                    ><img
+                                        src="assets/paper8_chatgpt.png"
+                                        alt="First page of paper"
+                                /></a>
+                            </div>
+                            <div class="pub-card-details">
+                                <div class="pub-card-expanded-header">
+                                    <h3 class="pub-card-title">
+                                        8.
+                                        <a
+                                            href="https://www.nature.com/articles/s41598-023-38964-3"
+                                            onclick="event.stopPropagation()"
+                                            >Perception, performance, and
+                                            detectability of conversational
+                                            artificial intelligence across 32
+                                            university courses</a
+                                        >
+                                    </h3>
+                                    <p class="journal">
+                                        <strong>Scientific Reports</strong> 13,
+                                        12187 (2023)
+                                    </p>
+                                </div>
+                                <div class="pub-card-detail-block">
+                                    <h4>Authors</h4>
+                                    <p>
+                                        <strong>Hazem Ibrahim</strong>, Liu, F.,
+                                        Asim, R., Battu, B., Benabderrahmane,
+                                        S., Alhafni, B., Adnan, W., Alhanai, T.,
+                                        AlShebli, B., Baghdadi, R.,
+                                        <em>et al.</em>
+                                    </p>
+                                </div>
+                                <div class="pub-card-detail-block">
+                                    <h4>Summary</h4>
+                                    <p class="pub-card-abstract">
+                                        This study evaluates ChatGPT's
+                                        performance across 32 university
+                                        courses, finding it achieved comparable
+                                        or superior grades to students in many
+                                        cases. The research also assesses the
+                                        detectability of AI-generated
+                                        submissions, revealing that existing
+                                        detection tools are largely ineffective
+                                        when simple paraphrasing techniques are
+                                        applied.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="media-item">
-                <h3><strong>Best Parallel Talk and Best Poster Awards at IC2S2 2024</strong></h3>
-                <p>I was awarded the Best Parallel Talk and Best Poster Awards at IC2S2 2024.</p>
-                <div class="media-images" align="center">
-                    <a href="https://ic2s2-2024.org/awards"><img src="assets/ic2s2_award.avif" alt="IC2S2 Awards" class="media-img" loading="lazy"></a>
+                <div class="pub-card" onclick="toggleCard(this)">
+                    <div class="pub-card-header">
+                        <div class="pub-card-header-content">
+                            <h3 class="pub-card-title">
+                                9.
+                                <a
+                                    href="https://dl.acm.org/doi/abs/10.1145/3618257.3624834"
+                                    onclick="event.stopPropagation()"
+                                    >I tag, you tag, everybody tags!</a
+                                >
+                            </h3>
+                            <p class="pub-card-authors-preview">
+                                Hazem Ibrahim, Asim, R., et al.
+                            </p>
+                            <p class="journal">
+                                <strong>ACM IMC</strong> (2023)
+                            </p>
+                        </div>
+                        <svg
+                            class="pub-card-chevron"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                        >
+                            <path
+                                d="M5 7.5L10 12.5L15 7.5"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+                    <div class="pub-card-body">
+                        <div class="pub-card-body-inner">
+                            <div class="pub-card-thumbnail">
+                                <a
+                                    href="https://dl.acm.org/doi/abs/10.1145/3618257.3624834"
+                                    target="_blank"
+                                    onclick="event.stopPropagation()"
+                                    ><img
+                                        src="assets/paper9_tags.png"
+                                        alt="First page of paper"
+                                /></a>
+                            </div>
+                            <div class="pub-card-details">
+                                <div class="pub-card-expanded-header">
+                                    <h3 class="pub-card-title">
+                                        9.
+                                        <a
+                                            href="https://dl.acm.org/doi/abs/10.1145/3618257.3624834"
+                                            onclick="event.stopPropagation()"
+                                            >I tag, you tag, everybody tags!</a
+                                        >
+                                    </h3>
+                                    <p class="journal">
+                                        <strong>ACM IMC</strong> (2023)
+                                    </p>
+                                </div>
+                                <div class="pub-card-detail-block">
+                                    <h4>Authors</h4>
+                                    <p>
+                                        <strong>Hazem Ibrahim</strong>, Asim,
+                                        R., Varvello, M., and Zaki, Y.
+                                    </p>
+                                </div>
+                                <div class="pub-card-detail-block">
+                                    <h4>Summary</h4>
+                                    <p class="pub-card-abstract">
+                                        This study evaluates the tracking
+                                        performance of Apple AirTags and Samsung
+                                        SmartTags across six countries over 120
+                                        days. Both tags achieve similar
+                                        accuracy, locating objects within 100
+                                        meters in about 10 minutes. Half of a
+                                        person's movements can be backtracked
+                                        with 10-meter accuracy after just one
+                                        hour, raising significant privacy
+                                        concerns.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
 
-        <footer class="footer">
-            <p>Last updated: April 2026 &middot; &copy; Hazem Ibrahim</p>
-        </footer>
-    </div>
-</body>
+                <div class="pub-card" onclick="toggleCard(this)">
+                    <div class="pub-card-header">
+                        <div class="pub-card-header-content">
+                            <h3 class="pub-card-title">
+                                10.
+                                <a href="#" onclick="event.stopPropagation()"
+                                    >Gamification in online educational
+                                    systems</a
+                                >
+                            </h3>
+                            <p class="pub-card-authors-preview">
+                                Hazem Ibrahim and Ibrahim, W.
+                            </p>
+                            <p class="journal">
+                                <strong
+                                    >6th International Conference on Higher
+                                    Education Advances (HEAd'20)</strong
+                                >
+                                (2020)
+                            </p>
+                        </div>
+                        <svg
+                            class="pub-card-chevron"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                        >
+                            <path
+                                d="M5 7.5L10 12.5L15 7.5"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+                    <div class="pub-card-body">
+                        <div class="pub-card-body-inner">
+                            <div class="pub-card-thumbnail">
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    onclick="event.stopPropagation()"
+                                    ><img
+                                        src="assets/paper10_gamification.png"
+                                        alt="First page of paper"
+                                /></a>
+                            </div>
+                            <div class="pub-card-details">
+                                <div class="pub-card-expanded-header">
+                                    <h3 class="pub-card-title">
+                                        10.
+                                        <a
+                                            href="#"
+                                            onclick="event.stopPropagation()"
+                                            >Gamification in online educational
+                                            systems</a
+                                        >
+                                    </h3>
+                                    <p class="journal">
+                                        <strong
+                                            >6th International Conference on
+                                            Higher Education Advances
+                                            (HEAd'20)</strong
+                                        >
+                                        (2020)
+                                    </p>
+                                </div>
+                                <div class="pub-card-detail-block">
+                                    <h4>Authors</h4>
+                                    <p>
+                                        <strong>Hazem Ibrahim</strong> and
+                                        Ibrahim, W.
+                                    </p>
+                                </div>
+                                <div class="pub-card-detail-block">
+                                    <h4>Summary</h4>
+                                    <p class="pub-card-abstract">
+                                        This paper reviews the application of
+                                        gamification in online educational
+                                        systems and its impact on student
+                                        motivation and retention. While
+                                        gamification initially boosts
+                                        engagement, the effect diminishes as
+                                        students become familiar with the
+                                        system. Personalization of the gamified
+                                        experience has been shown to sustain
+                                        motivation over longer periods.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" onclick="toggleCard(this)">
+                    <div class="pub-card-header">
+                        <div class="pub-card-header-content">
+                            <h3 class="pub-card-title">
+                                11.
+                                <a
+                                    href="https://ieeexplore.ieee.org/abstract/document/8536491/"
+                                    onclick="event.stopPropagation()"
+                                    >Multithreaded and reconvergent aware
+                                    algorithms for accurate digital circuits
+                                    reliability estimation</a
+                                >
+                            </h3>
+                            <p class="pub-card-authors-preview">
+                                Ibrahim, W., and Hazem Ibrahim
+                            </p>
+                            <p class="journal">
+                                <strong
+                                    >IEEE Transactions on Reliability</strong
+                                >
+                                (2018)
+                            </p>
+                        </div>
+                        <svg
+                            class="pub-card-chevron"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                        >
+                            <path
+                                d="M5 7.5L10 12.5L15 7.5"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+                    <div class="pub-card-body">
+                        <div class="pub-card-body-inner">
+                            <div class="pub-card-thumbnail">
+                                <a
+                                    href="https://ieeexplore.ieee.org/abstract/document/8536491/"
+                                    target="_blank"
+                                    onclick="event.stopPropagation()"
+                                    ><img
+                                        src="assets/paper11_circuits.png"
+                                        alt="First page of paper"
+                                /></a>
+                            </div>
+                            <div class="pub-card-details">
+                                <div class="pub-card-expanded-header">
+                                    <h3 class="pub-card-title">
+                                        11.
+                                        <a
+                                            href="https://ieeexplore.ieee.org/abstract/document/8536491/"
+                                            onclick="event.stopPropagation()"
+                                            >Multithreaded and reconvergent
+                                            aware algorithms for accurate
+                                            digital circuits reliability
+                                            estimation</a
+                                        >
+                                    </h3>
+                                    <p class="journal">
+                                        <strong
+                                            >IEEE Transactions on
+                                            Reliability</strong
+                                        >
+                                        (2018)
+                                    </p>
+                                </div>
+                                <div class="pub-card-detail-block">
+                                    <h4>Authors</h4>
+                                    <p>
+                                        Ibrahim, W., and
+                                        <strong>Hazem Ibrahim</strong>
+                                    </p>
+                                </div>
+                                <div class="pub-card-detail-block">
+                                    <h4>Summary</h4>
+                                    <p class="pub-card-abstract">
+                                        This paper introduces algorithms for
+                                        estimating digital circuit reliability
+                                        that account for reconvergent fan-out
+                                        effects and use multithreading for
+                                        efficiency. The proposed methods are as
+                                        accurate as Bayesian network approaches
+                                        while being up to five orders of
+                                        magnitude faster, enabling practical
+                                        reliability analysis of large-scale
+                                        circuits.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="publications">
+                <h3>
+                    <br />
+                    Under Review
+                </h3>
+
+                <div class="pub-card pub-card-static">
+                    <div class="pub-card-header">
+                        <div class="pub-card-header-content">
+                            <h3 class="pub-card-title">
+                                12.
+                                <a
+                                    href="https://arxiv.org/abs/2509.08299"
+                                    onclick="event.stopPropagation()"
+                                    >Causal evidence of racial and institutional
+                                    biases in accessing paywalled articles and
+                                    scientific data</a
+                                >
+                            </h3>
+                            <p class="pub-card-authors-preview">
+                                Hazem Ibrahim, Liu, F., et al.
+                            </p>
+                            <p class="journal">
+                                Revise and Resubmit at <strong>Science</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card pub-card-static">
+                    <div class="pub-card-header">
+                        <div class="pub-card-header-content">
+                            <h3 class="pub-card-title">
+                                13.
+                                <a
+                                    href="https://arxiv.org/abs/2505.04171"
+                                    onclick="event.stopPropagation()"
+                                    >Large language models are often politically
+                                    extreme, usually ideologically inconsistent,
+                                    and persuasive even in informational
+                                    contexts</a
+                                >
+                            </h3>
+                            <p class="pub-card-authors-preview">
+                                AlDahoul, N., Hazem Ibrahim, et al.
+                            </p>
+                            <p class="journal">
+                                Revise and Resubmit at
+                                <strong
+                                    >American Political Science Review</strong
+                                >
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card pub-card-static">
+                    <div class="pub-card-header">
+                        <div class="pub-card-header-content">
+                            <h3 class="pub-card-title">
+                                14.
+                                <a
+                                    href="https://arxiv.org/abs/2405.06404"
+                                    onclick="event.stopPropagation()"
+                                    >Inclusive content reduces racial and gender
+                                    biases, yet non-inclusive content dominates
+                                    popular media outlets</a
+                                >
+                            </h3>
+                            <p class="pub-card-authors-preview">
+                                AlDahoul, N., Hazem Ibrahim, et al.
+                            </p>
+                            <p class="journal">
+                                Under review at
+                                <strong>EPJ Data Science</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card pub-card-static">
+                    <div class="pub-card-header">
+                        <div class="pub-card-header-content">
+                            <h3 class="pub-card-title">
+                                15.
+                                <a
+                                    href="https://arxiv.org/abs/2509.08306"
+                                    onclick="event.stopPropagation()"
+                                    >Who Gets Seen in the Age of AI? Adoption
+                                    Patterns of Large Language Models in
+                                    Scholarly Writing and Citation Outcomes</a
+                                >
+                            </h3>
+                            <p class="pub-card-authors-preview">
+                                Farhan, K., Hazem Ibrahim, et al.
+                            </p>
+                            <p class="journal">
+                                Under review at
+                                <strong>Journal of Informetrics</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card pub-card-static">
+                    <div class="pub-card-header">
+                        <div class="pub-card-header-content">
+                            <h3 class="pub-card-title">
+                                16. A longitudinal analysis of racial and gender
+                                bias in New York Times and Fox News images and
+                                articles
+                            </h3>
+                            <p class="pub-card-authors-preview">
+                                Hazem Ibrahim, AlDahoul, N., et al.
+                            </p>
+                            <p class="journal">
+                                Revise and Resubmit at
+                                <strong>ICWSM 2026</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card pub-card-static">
+                    <div class="pub-card-header">
+                        <div class="pub-card-header-content">
+                            <h3 class="pub-card-title">
+                                17. Neutralizing the Narrative: AI-Powered
+                                Debiasing of Online News Articles
+                            </h3>
+                            <p class="pub-card-authors-preview">
+                                Kuo, C. W., Chu, et al.
+                            </p>
+                            <p class="journal">
+                                Under review at
+                                <strong
+                                    >Engineering Applications of Artificial
+                                    Intelligence</strong
+                                >
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card pub-card-static">
+                    <div class="pub-card-header">
+                        <div class="pub-card-header-content">
+                            <h3 class="pub-card-title">
+                                18.
+                                <a
+                                    href="https://arxiv.org/abs/2501.17452"
+                                    onclick="event.stopPropagation()"
+                                    >A Tale of Three Location Trackers: AirTag,
+                                    SmartTag, and Tile</a
+                                >
+                            </h3>
+                            <p class="pub-card-authors-preview">
+                                Jang, H. D., Hazem Ibrahim, et al.
+                            </p>
+                            <p class="journal">
+                                Under review at <strong>IMC 2026</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="works-in-progress">
+                <h3><br />In Preparation</h3>
+
+                <div class="pub-card pub-card-static">
+                    <div class="pub-card-header">
+                        <div class="pub-card-header-content">
+                            <h3 class="pub-card-title">
+                                19. Structural inequalities in Hollywood
+                                representation across a century of film
+                            </h3>
+                            <p class="pub-card-authors-preview">
+                                Hazem Ibrahim, AlDahoul, N., et al.
+                            </p>
+                            <p class="journal">
+                                <strong>In preparation</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card pub-card-static">
+                    <div class="pub-card-header">
+                        <div class="pub-card-header-content">
+                            <h3 class="pub-card-title">
+                                20. Two-thirds of citations to review papers
+                                belong to original research
+                            </h3>
+                            <p class="pub-card-authors-preview">
+                                Hazem Ibrahim, Liu, F., et al.
+                            </p>
+                            <p class="journal">
+                                <strong>In preparation</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card pub-card-static">
+                    <div class="pub-card-header">
+                        <div class="pub-card-header-content">
+                            <h3 class="pub-card-title">
+                                21. Measuring the Political Ideology of LLMs
+                                Across 90 Countries
+                            </h3>
+                            <p class="pub-card-authors-preview">
+                                Omari, A., Hazem Ibrahim, et al.
+                            </p>
+                            <p class="journal">
+                                <strong>In preparation</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card pub-card-static">
+                    <div class="pub-card-header">
+                        <div class="pub-card-header-content">
+                            <h3 class="pub-card-title">
+                                22. Examining propaganda on Telegram during the
+                                Russia/Ukraine War
+                            </h3>
+                            <p class="pub-card-authors-preview">
+                                Hazem Ibrahim, Holovatska, Y., et al.
+                            </p>
+                            <p class="journal">
+                                <strong>In preparation</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="teaching-service">
+                <h2>Teaching Experience &amp; Service</h2>
+
+                <h3>Teaching and Guest Lectures</h3>
+                <ul>
+                    <li>
+                        <em>Guest Lecturer</em>, CS-UH 2219E &ndash;
+                        <strong>Computational Social Science</strong> &ndash;
+                        NYU Abu Dhabi (Spring 2026)
+                    </li>
+                    <li>
+                        <em>Instructor</em>, CS-UH 1001 &ndash;
+                        <strong>Introduction to Computer Science</strong>
+                        &ndash; NYU Abu Dhabi (Fall 2020, Summer 2021, Fall
+                        2021)
+                    </li>
+                    <li>
+                        <em>Instructor</em>, CS-UH 1002 &ndash;
+                        <strong>Discrete Mathematics</strong> &ndash; NYU Abu
+                        Dhabi (Fall 2021, Spring 2022, Summer 2022)
+                    </li>
+                    <li>
+                        <em>Instructor</em>, CS-UH 1050 &ndash;
+                        <strong>Data Structures</strong> &ndash; NYU Abu Dhabi
+                        (Spring 2021, Fall 2021)
+                    </li>
+                    <li>
+                        <em>Instructor</em>, CS-UH 2214 &ndash;
+                        <strong>Database Systems</strong> &ndash; NYU Abu Dhabi
+                        (Fall 2021, Spring 2022)
+                    </li>
+                    <li>
+                        <em>Instructor</em>, CS-UH 2220 &ndash;
+                        <strong>Machine Learning</strong> &ndash; NYU Abu Dhabi
+                        (Spring 2022)
+                    </li>
+                    <li>
+                        <em>Instructor</em>, CS-UH 2219E &ndash;
+                        <strong>Computational Social Science</strong> &ndash;
+                        NYU Abu Dhabi (Spring 2021, Fall 2021)
+                    </li>
+                    <li>
+                        <em>Teaching Assistant</em>, CSC148H &ndash;
+                        <strong>Introduction to Computer Science</strong>
+                        &ndash; University of Toronto (Spring 2018, Fall 2018,
+                        Fall 2019)
+                    </li>
+                </ul>
+
+                <h3>Academic Advising</h3>
+                <ul>
+                    <li>
+                        Undergraduate Thesis Advisor &ndash; Tewoflos Girmay,
+                        Yana Holovatska (NYU Abu Dhabi, 2026)
+                    </li>
+                    <li>
+                        Undergraduate Thesis Advisor &ndash; Farhan Kamrul Khan,
+                        Chen Wei Kuo, and Kevin Chu (NYU Abu Dhabi, 2025)
+                    </li>
+                </ul>
+
+                <h3>Service</h3>
+                <ul>
+                    <li>
+                        <strong>Reviewer</strong>: PNAS Nexus, AAAI ICWSM,
+                        IC2S2, ACM WebConf (WWW), ACM CHI, ACM CSCW, and
+                        Scientometrics
+                    </li>
+                </ul>
+            </section>
+
+            <section class="media-coverage">
+                <h2>Media Coverage and Awards</h2>
+
+                <div class="media-item">
+                    <h3>
+                        <strong
+                            >Systematic partisan content skews in TikTok during
+                            the 2024 U.S. elections</strong
+                        >
+                    </h3>
+                    <p>
+                        Using 323 independent bot-driven audits, we tracked
+                        changes in TikTok's recommendation algorithm in the six
+                        months prior to the 2024 US presidential race. Our
+                        findings were covered by Nature, The Guardian, The
+                        Telegraph, El Pais, Der Standard, and NextShark.
+                    </p>
+                    <div class="media-images" align="center">
+                        <a
+                            href="https://www.nature.com/articles/d41586-026-01314-0"
+                            ><img
+                                src="assets/tiktok_7.png"
+                                alt="tiktok_7"
+                                class="media-img"
+                                loading="lazy"
+                        /></a>
+                        <a
+                            href="https://www.theguardian.com/technology/2026/may/06/tiktok-pro-republican-algorithm-2024-election"
+                            ><img
+                                src="assets/tiktok_4.png"
+                                alt="tiktok_4"
+                                class="media-img"
+                                loading="lazy"
+                        /></a>
+                        <a
+                            href="https://www.macon.com/news/nation-world/national/article315664071.html"
+                            ><img
+                                src="assets/tiktok_6.png"
+                                alt="tiktok_6"
+                                class="media-img"
+                                loading="lazy"
+                        /></a>
+                        <a
+                            href="https://english.elpais.com/technology/2026-05-06/tiktok-helped-trump-win-the-2024-election-as-the-platforms-future-in-the-us-hung-in-the-balance.html"
+                            ><img
+                                src="assets/tiktok_5.png"
+                                alt="tiktok_5"
+                                class="media-img"
+                                loading="lazy"
+                        /></a>
+                        <a
+                            href="https://www.derstandard.at/story/3000000256046/wie-tiktok-im-us-wahlkampf-die-republikaner-unterstuetzt-haben-soll"
+                            ><img
+                                src="assets/tiktok_2.png"
+                                alt="tiktok_2"
+                                class="media-img"
+                                loading="lazy"
+                        /></a>
+                        <a
+                            href="https://www.yahoo.com/news/tiktok-algorithm-shows-bias-political-154014827.html?guccounter=1"
+                            ><img
+                                src="assets/tiktok_3.png"
+                                alt="tiktok_3"
+                                class="media-img"
+                                loading="lazy"
+                        /></a>
+                    </div>
+                </div>
+
+                <div class="media-item">
+                    <h3><strong>Best Poster Award at AI4GS 2025</strong></h3>
+                    <p>
+                        I was awarded the Best Poster Award for my poster on
+                        investigating racial and institutional biases in
+                        accessing paywalled articles and scientific data.
+                    </p>
+                    <div class="media-images" align="center">
+                        <img
+                            src="assets/ai4gs_award.png"
+                            alt="AI4GS Poster"
+                            class="media-img"
+                            loading="lazy"
+                            style="width: 70%; height: auto"
+                        />
+                    </div>
+                </div>
+
+                <div class="media-item">
+                    <h3><strong>ChatGPT and Homework</strong></h3>
+                    <p>
+                        Our paper "Perception, Performance, and Detectability of
+                        Conversational Artificial Intelligence Across 32
+                        University Courses" evaluated ChatGPT's ability to solve
+                        homework assignment. It was covered by news outlets
+                        worldwide: Scientific American, The Times, The
+                        Independent, Nature Asia, Government Tech, Daily Mail,
+                        The Daily Beast, New Scientist, EurekAlert!, Phys.org,
+                        The National, Neuroscience News, Nature Middle East.
+                    </p>
+                    <div class="media-images">
+                        <a
+                            href="https://www.thetimes.co.uk/article/ai-detectors-fail-when-texts-are-run-through-online-grammar-tool-xh5cqtxgp"
+                            ><img
+                                src="assets/gpt_1.avif"
+                                alt="gpt_1"
+                                class="media-img"
+                                loading="lazy"
+                        /></a>
+                        <a
+                            href="https://www.scientificamerican.com/article/chatgpt-can-get-good-grades-what-should-educators-do-about-it/"
+                            ><img
+                                src="assets/gpt_2.avif"
+                                alt="gpt_2"
+                                class="media-img"
+                                loading="lazy"
+                        /></a>
+                        <a
+                            href="https://www.newscientist.com/article/2388789-chatgpt-gets-better-marks-than-students-in-some-university-courses/"
+                            ><img
+                                src="assets/gpt_3.avif"
+                                alt="gpt_3"
+                                class="media-img"
+                                loading="lazy"
+                        /></a>
+                        <a
+                            href="https://www.independent.co.uk/news/uk/politics/chatgpt-research-department-for-education-b2398826.html"
+                            ><img
+                                src="assets/gpt_4.png"
+                                alt="gpt_4"
+                                class="media-img"
+                                loading="lazy"
+                        /></a>
+                        <a
+                            href="https://www.natureasia.com/ar/nmiddleeast/article/10.1038/nmiddleeast.2023.154"
+                            ><img
+                                src="assets/gpt_5.png"
+                                alt="gpt_5"
+                                class="media-img"
+                                loading="lazy"
+                        /></a>
+                        <a
+                            href="https://www.natureasia.com/ja-jp/research/highlight/14624"
+                            ><img
+                                src="assets/gpt_6.png"
+                                alt="gpt_6"
+                                class="media-img"
+                                loading="lazy"
+                        /></a>
+                    </div>
+                </div>
+
+                <div class="media-item">
+                    <h3><strong>Citation manipulation</strong></h3>
+                    <p>
+                        We went under cover, contacted a "citation boosting
+                        service", and managed to buy citations that appeared in
+                        a Scopus-Indexed journal. Our sting operation provided
+                        conclusive evidence that citations can be bought in
+                        bulk. The findings were covered by Nature and Science.
+                    </p>
+                    <div class="media-images" align="center">
+                        <a
+                            href="https://www.science.org/content/article/vendor-offering-citations-purchase-latest-bad-actor-scholarly-publishing"
+                            ><img
+                                src="assets/scholar_1.avif"
+                                alt="scholar_1"
+                                class="media-img"
+                                loading="lazy"
+                        /></a>
+                        <a
+                            href="https://www.nature.com/articles/d41586-024-01672-7"
+                            ><img
+                                src="assets/scholar_2.avif"
+                                alt="scholar_2"
+                                class="media-img"
+                                loading="lazy"
+                        /></a>
+                        <a
+                            href="https://www.science.org/content/article/how-easy-it-fudge-your-scientific-rank-meet-larry-world-s-most-cited-cat"
+                            ><img
+                                src="assets/scholar_3.avif"
+                                alt="scholar_3"
+                                class="media-img"
+                                loading="lazy"
+                        /></a>
+                    </div>
+                </div>
+
+                <div class="media-item">
+                    <h3>
+                        <strong
+                            >YouTube's recommendation algorithm is left-leaning
+                            in the United States</strong
+                        >
+                    </h3>
+                    <p>
+                        Our paper "YouTube's recommendation algorithm is
+                        left-leaning in the United States" revealed a political
+                        bias in YouTube's algorithm. The paper was published in
+                        PNAS Nexus, and received media coverage from Daily
+                        Caller, American Council on Science and Health, The
+                        College Fix, PsyPost.
+                    </p>
+                    <div class="media-images" align="center">
+                        <a
+                            href="https://www.psypost.org/2023/09/youtubes-recommendation-system-exhibits-left-leaning-bias-new-study-suggests-195536"
+                            ><img
+                                src="assets/youtube_1.avif"
+                                alt="youtube_1"
+                                class="media-img"
+                                loading="lazy"
+                        /></a>
+                        <a
+                            href="https://www.acsh.org/news/2023/08/28/counter-intuitive-bias-youtube%E2%80%99s-algorithm-17291"
+                            ><img
+                                src="assets/youtube_2.avif"
+                                alt="youtube_2"
+                                class="media-img"
+                                loading="lazy"
+                        /></a>
+                        <a
+                            href="https://dailycaller.com/2023/08/22/youtube-algorithm-has-a-left-wing-bias-researchers-find/"
+                            ><img
+                                src="assets/youtube_3.avif"
+                                alt="youtube_3"
+                                class="media-img"
+                                loading="lazy"
+                        /></a>
+                    </div>
+                </div>
+
+                <div class="media-item">
+                    <h3><strong>MIT Innovator Under 35 Award</strong></h3>
+                    <p>
+                        I was awarded the MIT Innovator Under 35 Award in 2023
+                        for my work on large language models and its impact on
+                        university education.
+                    </p>
+                    <div class="media-images" align="center">
+                        <a
+                            href="https://majarra.com/en/about/news/%D8%A5%D8%B9%D9%84%D8%A7%D9%86-%D9%82%D8%A7%D8%A6%D9%85%D8%A9-%D8%A7%D9%84%D9%81%D8%A7%D8%A6%D8%B2%D9%8A%D9%86-%D8%A8%D8%AC%D8%A7%D8%A6%D8%B2%D8%A9-%22%D9%85%D8%A8%D8%AA%D9%83%D8%B1%D9%88%D9%86-%D8%AF%D9%88%D9%86-35%22-%D9%84%D8%B9%D8%A7%D9%85-2023?from=home_page"
+                            ><img
+                                src="assets/mit_media_award_2.png"
+                                alt="MIT Innovator Under 35 Award"
+                                class="media-img-large media-img"
+                                loading="lazy"
+                        /></a>
+                    </div>
+                </div>
+
+                <div class="media-item">
+                    <h3>
+                        <strong
+                            >Best Parallel Talk and Best Poster Awards at IC2S2
+                            2024</strong
+                        >
+                    </h3>
+                    <p>
+                        I was awarded the Best Parallel Talk and Best Poster
+                        Awards at IC2S2 2024.
+                    </p>
+                    <div class="media-images" align="center">
+                        <a href="https://ic2s2-2024.org/awards"
+                            ><img
+                                src="assets/ic2s2_award.avif"
+                                alt="IC2S2 Awards"
+                                class="media-img"
+                                loading="lazy"
+                        /></a>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p>Last updated: May 2026 &middot; &copy; Hazem Ibrahim</p>
+            </footer>
+        </div>
+        <script>
+            function toggleCard(el) {
+                var card = el.closest(".pub-card") || el;
+                var body = card.querySelector(".pub-card-body");
+                if (!body) return;
+                if (card.classList.contains("expanded")) {
+                    body.style.maxHeight = body.scrollHeight + "px";
+                    body.offsetHeight;
+                    body.style.maxHeight = "0px";
+                    card.classList.remove("expanded");
+                } else {
+                    card.classList.add("expanded");
+                    body.style.maxHeight = body.scrollHeight + "px";
+                    function onEnd() {
+                        if (card.classList.contains("expanded"))
+                            body.style.maxHeight = "none";
+                        body.removeEventListener("transitionend", onEnd);
+                    }
+                    body.addEventListener("transitionend", onEnd);
+                }
+            }
+        </script>
+    </body>
 </html>
