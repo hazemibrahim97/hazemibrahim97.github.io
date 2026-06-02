@@ -78,7 +78,7 @@ body {
 
 .headshot {
     width: 100%;
-    max-width: 260px;
+    max-width: 200px;
     height: auto;
     aspect-ratio: 1;
     border-radius: 5%;
@@ -196,15 +196,15 @@ h1 {
 
 .title {
     font-size: 1.25em;
-    color: var(--text-primary);
+    color: var(--text-secondary);
     margin-bottom: 8px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.4;
 }
 
 .email {
     font-size: 1em;
-    color: var(--text-primary);
+    color: var(--text-secondary);
     font-style: normal;
     font-weight: 400;
 }
@@ -406,6 +406,51 @@ h3 {
 }
 .pub-card-abstract {
     color: var(--text-secondary) !important;
+}
+
+/* Section toggle */
+.section-toggle-container {
+    text-align: center;
+    margin: 20px 0 8px;
+}
+
+.section-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    background: var(--bg-primary);
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    font-family: inherit;
+}
+
+.section-toggle-btn:hover {
+    color: var(--text-primary);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.section-toggle-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.section-toggle-btn.active svg {
+    transform: rotate(180deg);
+}
+
+.collapsible-sections {
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.collapsible-sections.collapsed {
+    max-height: 0;
 }
 
 .research-interests {

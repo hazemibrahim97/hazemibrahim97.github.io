@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LLM Political Ideology Benchmark — CES 2024</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>LLM Political Ideology Benchmark</h1>
+      <p class="lede">
+        Where does a language model fall on the U.S. political spectrum? Each model answers
+        40 policy questions from the 2024 Cooperative Election Study (CES); its answers are
+        projected onto an ideological axis fit on ~60,000 human respondents. Higher = more
+        conservative, lower = more liberal. Compare against demographic groups and every
+        model we&rsquo;ve tested.
+      </p>
+      <details class="about">
+        <summary>About &amp; methodology</summary>
+        <div class="about-body">
+          <p>
+            We score each model on its answers to 40 CES&nbsp;2024 policy items, coded
+            Support&nbsp;/&nbsp;Oppose. A single ideological axis is fit once on ~60,000
+            human respondents using PCA, then <em>frozen</em> &mdash; every model and human
+            is projected onto that same fixed axis, so scores stay comparable as new models
+            are added. The axis is oriented so lower&nbsp;=&nbsp;liberal and
+            higher&nbsp;=&nbsp;conservative.
+          </p>
+          <p>
+            To place your own model, download <code class="inline">benchmark_runner.py</code>,
+            run it against any OpenAI-compatible, Anthropic, or Google endpoint, and upload the
+            resulting CSV. Everything is computed in your browser &mdash; nothing is uploaded.
+          </p>
+        </div>
+      </details>
+    </div>
+  </header>
+
+  <main>
+    <div class="chart-wrap">
+      <svg id="chart" width="1180" height="780" role="img"
+           aria-label="Ideology benchmark chart"></svg>
+    </div>
+    <div class="legend" id="legend"></div>
+
+    <div class="panels">
+      <section class="panel">
+        <h2>Add a result</h2>
+        <div class="tabs">
+          <div class="tab active" data-tab="upload">Test an LLM</div>
+          <div class="tab" data-tab="self">Test yourself</div>
+        </div>
+
+        <div id="tab-upload">
+          <p class="hint">
+            Download <a href="benchmark_runner.py" download><code class="inline">benchmark_runner.py</code></a>
+            and run it against your model, then drop its output file here. No API?
+            <a href="#" id="download-template">Download a blank CSV</a>, fill in the
+            <code class="inline">answer</code> column with Support/Oppose, and re-upload it.
+          </p>
+          <details class="note" style="margin:-6px 0 12px">
+            <summary style="cursor:pointer">How to run the script</summary>
+            <pre style="white-space:pre-wrap;background:#f4f4f5;padding:8px 10px;border-radius:6px;font-size:12px;margin:8px 0 0">python benchmark_runner.py \
+  --provider openai-compatible \
+  --model gpt-4o --api-key YOUR_KEY</pre>
+            <span>Providers: <code class="inline">openai-compatible</code>,
+            <code class="inline">anthropic</code>, <code class="inline">google</code>.
+            Standard library only &mdash; no installs. Writes
+            <code class="inline">results_&lt;model&gt;.csv</code> to upload here.</span>
+          </details>
+          <div class="field">
+            <label for="model-name">Model name (shown on the chart)</label>
+            <input id="model-name" type="text" placeholder="e.g. My New LLM v1" />
+          </div>
+          <div class="dropzone" id="dropzone">
+            Drop a results CSV here, or click to choose a file.
+          </div>
+          <div id="upload-result"></div>
+          <p class="note">
+            Your result is computed locally in your browser and shown only to you
+            &mdash; nothing is uploaded or stored.
+          </p>
+        </div>
+
+        <div id="tab-self" style="display:none">
+          <p class="hint">Answer the 40 questions as you would, then see where you land
+            among respondents and models. Stays on your machine.</p>
+          <div class="q-list" id="q-list"></div>
+          <div style="margin-top:12px; display:flex; gap:8px; align-items:center">
+            <button class="primary" id="self-submit">Place me on the chart</button>
+            <button class="secondary" id="self-clear">Clear</button>
+            <span class="note" id="self-progress"></span>
+          </div>
+          <div id="self-result"></div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Leaderboard</h2>
+        <p class="hint">All tested models, most liberal to most conservative.</p>
+        <div id="leaderboard"></div>
+      </section>
+    </div>
+  </main>
+
+  <div class="tooltip" id="tooltip"></div>
+  <script src="app.js"></script>
+</body>
+</html>
