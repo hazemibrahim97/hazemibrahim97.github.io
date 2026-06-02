@@ -1,0 +1,248 @@
+[
+  {
+    "model": "Mistral Large",
+    "score": -4.1953512454644795,
+    "n_answered": 40,
+    "respondent_percentile": 11.39
+  },
+  {
+    "model": "GPT 4o",
+    "score": -3.707551086865897,
+    "n_answered": 40,
+    "respondent_percentile": 17.081666666666667
+  },
+  {
+    "model": "GPT 4o-mini",
+    "score": -3.5039138666719216,
+    "n_answered": 40,
+    "respondent_percentile": 19.286666666666665
+  },
+  {
+    "model": "GPT-OSS 20B",
+    "score": -3.417669693528714,
+    "n_answered": 40,
+    "respondent_percentile": 20.133333333333333
+  },
+  {
+    "model": "Mistral Nemo",
+    "score": -3.2112180342162873,
+    "n_answered": 40,
+    "respondent_percentile": 22.195
+  },
+  {
+    "model": "DeepSeek V4 Flash",
+    "score": -3.0634239374790897,
+    "n_answered": 40,
+    "respondent_percentile": 23.633333333333333
+  },
+  {
+    "model": "Nvidia Nemotron",
+    "score": -2.976013574153427,
+    "n_answered": 40,
+    "respondent_percentile": 24.456666666666667
+  },
+  {
+    "model": "Gemma 27B",
+    "score": -2.937357065647833,
+    "n_answered": 40,
+    "respondent_percentile": 24.776666666666667
+  },
+  {
+    "model": "GPT 5.4 Mini",
+    "score": -2.919320469250736,
+    "n_answered": 40,
+    "respondent_percentile": 24.953333333333333
+  },
+  {
+    "model": "GPT-OSS 120B",
+    "score": -2.8505622409212954,
+    "n_answered": 40,
+    "respondent_percentile": 25.561666666666667
+  },
+  {
+    "model": "GPT 3.5 Turbo",
+    "score": -2.687668947090251,
+    "n_answered": 40,
+    "respondent_percentile": 26.99166666666667
+  },
+  {
+    "model": "Qwen 2.5 7B",
+    "score": -2.6840940918005076,
+    "n_answered": 40,
+    "respondent_percentile": 27.018333333333334
+  },
+  {
+    "model": "Gemma 9B",
+    "score": -2.6817330180017356,
+    "n_answered": 40,
+    "respondent_percentile": 27.036666666666665
+  },
+  {
+    "model": "Calme 3.3 3B",
+    "score": -2.644706151700811,
+    "n_answered": 40,
+    "respondent_percentile": 27.323333333333334
+  },
+  {
+    "model": "Mistral Small (2409)",
+    "score": -2.641835933130818,
+    "n_answered": 40,
+    "respondent_percentile": 27.34333333333333
+  },
+  {
+    "model": "Gemini 2.5 Pro",
+    "score": -2.6212314032569335,
+    "n_answered": 40,
+    "respondent_percentile": 27.513333333333335
+  },
+  {
+    "model": "Llama 4 Maverick",
+    "score": -2.503821281165517,
+    "n_answered": 40,
+    "respondent_percentile": 28.525
+  },
+  {
+    "model": "Llama 4 Scout",
+    "score": -2.498849649956835,
+    "n_answered": 40,
+    "respondent_percentile": 28.560000000000002
+  },
+  {
+    "model": "Phi 4",
+    "score": -2.3963820455541813,
+    "n_answered": 40,
+    "respondent_percentile": 29.44333333333333
+  },
+  {
+    "model": "Llama 3.1 8B",
+    "score": -2.29045634164435,
+    "n_answered": 40,
+    "respondent_percentile": 30.281666666666666
+  },
+  {
+    "model": "Nemotron 3 120B",
+    "score": -2.289089710465687,
+    "n_answered": 40,
+    "respondent_percentile": 30.294999999999998
+  },
+  {
+    "model": "Llama 3.3 70B",
+    "score": -2.104480375534984,
+    "n_answered": 40,
+    "respondent_percentile": 31.7
+  },
+  {
+    "model": "Phi 3.5 Mini",
+    "score": -2.025459129589341,
+    "n_answered": 40,
+    "respondent_percentile": 32.61
+  },
+  {
+    "model": "Phi 3.5 MoE",
+    "score": -1.9579632847876707,
+    "n_answered": 40,
+    "respondent_percentile": 33.12
+  },
+  {
+    "model": "Claude 4.5 Haiku",
+    "score": -1.872876460755178,
+    "n_answered": 40,
+    "respondent_percentile": 33.975
+  },
+  {
+    "model": "DeepSeek Chat V3.2",
+    "score": -1.7778709098324572,
+    "n_answered": 40,
+    "respondent_percentile": 34.86
+  },
+  {
+    "model": "Gemini 2.5 Flash",
+    "score": -1.7032856248993617,
+    "n_answered": 40,
+    "respondent_percentile": 35.55166666666666
+  },
+  {
+    "model": "Llama 3.1 70B",
+    "score": -1.6930003179227682,
+    "n_answered": 40,
+    "respondent_percentile": 35.62166666666667
+  },
+  {
+    "model": "GLM 4 32B",
+    "score": -1.6072839421170075,
+    "n_answered": 40,
+    "respondent_percentile": 36.57833333333333
+  },
+  {
+    "model": "Mistral Small (2603)",
+    "score": -1.5061005550242956,
+    "n_answered": 40,
+    "respondent_percentile": 37.471666666666664
+  },
+  {
+    "model": "Grok 4",
+    "score": -1.3444515149619285,
+    "n_answered": 40,
+    "respondent_percentile": 39.005
+  },
+  {
+    "model": "Falcon 3",
+    "score": -1.2753461880463624,
+    "n_answered": 40,
+    "respondent_percentile": 39.684999999999995
+  },
+  {
+    "model": "GPT 5.4 Nano",
+    "score": -1.264704619018499,
+    "n_answered": 40,
+    "respondent_percentile": 39.80833333333334
+  },
+  {
+    "model": "Gemini 3.1 Flash Lite",
+    "score": -1.257695369625312,
+    "n_answered": 40,
+    "respondent_percentile": 39.891666666666666
+  },
+  {
+    "model": "GPT 5.4",
+    "score": -1.2562174787528504,
+    "n_answered": 40,
+    "respondent_percentile": 39.913333333333334
+  },
+  {
+    "model": "Claude 4.6 Sonnet",
+    "score": -1.240797493600423,
+    "n_answered": 40,
+    "respondent_percentile": 40.065
+  },
+  {
+    "model": "Llama 3.2 1B",
+    "score": -1.155609698310395,
+    "n_answered": 40,
+    "respondent_percentile": 40.913333333333334
+  },
+  {
+    "model": "GLM 5 Turbo",
+    "score": -1.0625242798310566,
+    "n_answered": 40,
+    "respondent_percentile": 41.754999999999995
+  },
+  {
+    "model": "Gemma 3",
+    "score": -0.9715258470545167,
+    "n_answered": 40,
+    "respondent_percentile": 42.586666666666666
+  },
+  {
+    "model": "Grok 3",
+    "score": -0.41460023893530806,
+    "n_answered": 40,
+    "respondent_percentile": 47.77666666666667
+  },
+  {
+    "model": "Qwen 3.5 35B",
+    "score": 0.8069108350025929,
+    "n_answered": 40,
+    "respondent_percentile": 58.825
+  }
+]
