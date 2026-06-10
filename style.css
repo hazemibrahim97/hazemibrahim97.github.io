@@ -248,23 +248,9 @@ button:focus-visible,
     background: var(--hairline-soft);
 }
 
-/* ---------- About / hero ---------- */
-
-.hero {
-    font-size: clamp(27px, 3.2vw, 40px);
-    font-weight: 600;
-    line-height: 1.18;
-    letter-spacing: -0.032em;
-    max-width: 24ch;
-}
-
-.hero em {
-    font-style: italic;
-    color: var(--accent);
-}
+/* ---------- About ---------- */
 
 .about-body {
-    margin-top: 28px;
     max-width: 64ch;
 }
 
