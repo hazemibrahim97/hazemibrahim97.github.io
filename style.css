@@ -1,7 +1,7 @@
 /* ============================================================
    Hazem Ibrahim — personal site
    Editorial, typography-first design system.
-   Type:   Instrument Sans throughout
+   Type:   IBM Plex Sans; IBM Plex Serif for name + paper titles
    Canvas: warm white, ink text, deep blue accent, hairline rules
    ============================================================ */
 
@@ -30,8 +30,9 @@ html {
     --accent-tint: rgba(43, 85, 162, 0.07);
     --shadow-soft: 0 10px 30px rgba(26, 26, 24, 0.08);
     --sans:
-        "Instrument Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
         sans-serif;
+    --serif: "IBM Plex Serif", Georgia, serif;
     --pad-x: clamp(24px, 5vw, 72px);
 }
 
@@ -74,7 +75,7 @@ button:focus-visible,
 /* ---------- Layout ---------- */
 
 .layout {
-    max-width: 1180px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 72px var(--pad-x) 0;
     display: grid;
@@ -99,6 +100,7 @@ button:focus-visible,
 }
 
 .side-name {
+    font-family: var(--serif);
     font-size: 28px;
     font-weight: 700;
     letter-spacing: -0.03em;
@@ -251,7 +253,7 @@ button:focus-visible,
 /* ---------- About ---------- */
 
 .about-body {
-    max-width: 64ch;
+    max-width: 72ch;
 }
 
 .about-body p {
@@ -273,7 +275,7 @@ button:focus-visible,
 
 .news-list {
     list-style: none;
-    max-width: 64ch;
+    max-width: 72ch;
     padding: 0;
     margin: 0;
 }
@@ -377,6 +379,7 @@ button:focus-visible,
 }
 
 .pub-title {
+    font-family: var(--serif);
     font-size: 16.5px;
     font-weight: 600;
     line-height: 1.45;
@@ -706,7 +709,7 @@ a.pub-thumb:hover img {
 }
 
 .footer-inner {
-    max-width: 1180px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 26px var(--pad-x) 48px;
     display: flex;
