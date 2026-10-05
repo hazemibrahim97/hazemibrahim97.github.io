@@ -92,7 +92,8 @@ button:focus-visible,
 }
 
 .headshot {
-    width: 176px;
+    width: 212px;
+    height: auto;
     aspect-ratio: 1;
     object-fit: cover;
     border-radius: 20px;
