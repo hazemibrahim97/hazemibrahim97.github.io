@@ -59,7 +59,7 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",
 const LBL={uk_control:"Ukrainian post · Control (post only)",uk_natural:"Ukrainian post · Natural mix",uk_amplified:"Ukrainian post · Amplified, no AI",uk_translated:"Ukrainian post · Amplified, translated into Ukrainian",uk_ai:"Ukrainian post · Amplified with AI",ru_control:"Russian post · Control (post only)",ru_natural:"Russian post · Natural mix",ru_amplified:"Russian post · Amplified, no AI",ru_ai:"Russian post · Amplified with AI"};
 const TAG={organic:["Organic","t-organic"],real:["Coordinated","t-real"],translated:["Coordinated, translated","t-translated"],ai:["Coordinated, AI draft","t-ai"]};
 const view=document.getElementById("view"),story=document.getElementById("story"),out=document.getElementById("out");
-view.innerHTML=`<option value="pre_uk">Pre-survey questionnaire (Ukrainian)</option><option value="pre_ru">Pre-survey questionnaire (Russian)</option>`+D.conditions.map(c=>`<option value="${c.id}">${LBL[c.id]}</option>`).join("")+`<option value="post_uk">Post-survey questionnaire (Ukrainian)</option><option value="post_ru">Post-survey questionnaire (Russian)</option>`;
+view.innerHTML=`<option value="summary">Experiment summary (PDF)</option><option value="pre_uk">Pre-survey questionnaire (Ukrainian)</option><option value="pre_ru">Pre-survey questionnaire (Russian)</option>`+D.conditions.map(c=>`<option value="${c.id}">${LBL[c.id]}</option>`).join("")+`<option value="post_uk">Post-survey questionnaire (Ukrainian)</option><option value="post_ru">Post-survey questionnaire (Russian)</option>`;
 story.innerHTML=D.stories.map(s=>`<option value="${s.id}">${s.id} · ${s.topic}${s.coordinated.uk.ai?" · has AI drafts":""}</option>`).join("");
 const col=s=>`hsl(${[...s].reduce((a,c)=>a*31+c.charCodeAt(0),7)%360} 55% 45%)`;
 // small seeded shuffle so a story and arm always show the same section
@@ -129,6 +129,6 @@ return `<div class="wrap"><div class="warn">${S.warn}</div><form onsubmit="retur
 <div class="box"><h2>${S.dT}</h2><p>${S.d0}</p>${S.dArm.map(p=>`<p class="note">${esc(p)}</p>`).join("")}<button class="btn" type="button">${S.send}</button></div></form></div>`}
 
 function draw(){const v=view.value,c=D.conditions.find(x=>x.id==v);document.getElementById("sw").style.visibility=c?"visible":"hidden";
- if(v.startsWith("pre_"))out.innerHTML=surveyPre(v.slice(4));else if(v.startsWith("post_"))out.innerHTML=surveyPost(v.slice(5));else arm(c,D.stories.find(s=>s.id==story.value));scrollTo(0,0)}
+ if(v=="summary")out.innerHTML=`<div class="wrap"><p class="note"><a href="summary.pdf" target="_blank">Open or download the PDF</a></p><iframe src="summary.pdf" title="Experiment summary" style="width:100%;height:80vh;border:0;background:#fff;border-radius:8px"></iframe></div>`;else if(v.startsWith("pre_"))out.innerHTML=surveyPre(v.slice(4));else if(v.startsWith("post_"))out.innerHTML=surveyPost(v.slice(5));else arm(c,D.stories.find(s=>s.id==story.value));scrollTo(0,0)}
 view.onchange=story.onchange=draw;story.value="s02";draw();
 </script></body></html>
